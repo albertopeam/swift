@@ -22,7 +22,7 @@ class AppFeatureToggle: FeatureToggle {
         return nil
     }
 }
-let configuration = ToggleConfiguration(xFeature: false)
+let configuration = ToggleConfiguration(xFeature: false) //change to true to see diff
 let featureToggle: FeatureToggle = AppFeatureToggle(configuration: configuration)
 
 // returning type
