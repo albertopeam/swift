@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D30BCD642509602C00E285FF /* SnackBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30BCD632509602C00E285FF /* SnackBarView.swift */; };
+		D30BCD672509611C00E285FF /* Frameworks in Frameworks */ = {isa = PBXBuildFile; productRef = D30BCD662509611C00E285FF /* Frameworks */; };
 		D3E1A3D72506BCA900C1085D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E1A3D62506BCA900C1085D /* AppDelegate.swift */; };
 		D3E1A3D92506BCA900C1085D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E1A3D82506BCA900C1085D /* SceneDelegate.swift */; };
 		D3E1A3DB2506BCA900C1085D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E1A3DA2506BCA900C1085D /* ContentView.swift */; };
@@ -19,6 +21,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D30BCD632509602C00E285FF /* SnackBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnackBarView.swift; sourceTree = "<group>"; };
+		D30BCD65250960AD00E285FF /* Frameworks */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Frameworks; sourceTree = "<group>"; };
 		D3E1A3D32506BCA900C1085D /* CleanArchitecture.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CleanArchitecture.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3E1A3D62506BCA900C1085D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D3E1A3D82506BCA900C1085D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -40,6 +44,7 @@
 				D3FAC8902506C173005CE982 /* Application in Frameworks */,
 				D3FAC8972506C64C005CE982 /* Adapters in Frameworks */,
 				D3FAC8942506C5BD005CE982 /* Entities in Frameworks */,
+				D30BCD672509611C00E285FF /* Frameworks in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,6 +71,7 @@
 		D3E1A3D52506BCA900C1085D /* CleanArchitecture */ = {
 			isa = PBXGroup;
 			children = (
+				D30BCD65250960AD00E285FF /* Frameworks */,
 				D3FAC8952506C63E005CE982 /* Adapters */,
 				D3FAC88E2506C023005CE982 /* Application */,
 				D3FAC88D2506BFB2005CE982 /* Entities */,
@@ -76,6 +82,7 @@
 				D3E1A3E12506BCAE00C1085D /* LaunchScreen.storyboard */,
 				D3E1A3E42506BCAE00C1085D /* Info.plist */,
 				D3E1A3DE2506BCAE00C1085D /* Preview Content */,
+				D30BCD632509602C00E285FF /* SnackBarView.swift */,
 			);
 			path = CleanArchitecture;
 			sourceTree = "<group>";
@@ -115,6 +122,7 @@
 				D3FAC88F2506C173005CE982 /* Application */,
 				D3FAC8932506C5BD005CE982 /* Entities */,
 				D3FAC8962506C64C005CE982 /* Adapters */,
+				D30BCD662509611C00E285FF /* Frameworks */,
 			);
 			productName = CleanArchitecture;
 			productReference = D3E1A3D32506BCA900C1085D /* CleanArchitecture.app */;
@@ -172,6 +180,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D3E1A3D72506BCA900C1085D /* AppDelegate.swift in Sources */,
+				D30BCD642509602C00E285FF /* SnackBarView.swift in Sources */,
 				D3E1A3D92506BCA900C1085D /* SceneDelegate.swift in Sources */,
 				D3E1A3DB2506BCA900C1085D /* ContentView.swift in Sources */,
 			);
@@ -369,6 +378,10 @@
 /* End XCConfigurationList section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		D30BCD662509611C00E285FF /* Frameworks */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Frameworks;
+		};
 		D3FAC88F2506C173005CE982 /* Application */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Application;
