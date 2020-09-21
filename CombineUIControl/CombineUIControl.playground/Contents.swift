@@ -46,6 +46,7 @@ extension UIControl {
 
         func cancel() {
             subscriber = nil
+            control.removeTarget(self, action: #selector(didReceiveEvent), for: event)
         }
 
         @objc private func didReceiveEvent() {
@@ -74,5 +75,11 @@ UIControl.EventPublisher(control: button, event: .touchUpInside)
 
 PlaygroundPage.current.liveView = button
 PlaygroundPage.current.needsIndefiniteExecution = true
+
+/* check that not receives more events after 10sec
+DispatchQueue.main.asyncAfter(deadline: .now() + 10, execute: {
+    subscriptions.removeAll()
+})
+ */
 
 
