@@ -7,28 +7,72 @@
 //
 
 import XCTest
+import RxSwift
+import RxTest
+import RxBlocking
 @testable import CombineVsRXSwift
 
 class CombineVsRXSwiftTests: XCTestCase {
 
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+    func testAsyncBehaviour() throws {
+        let disposeBag = DisposeBag()
+        let sut = Publisher()
+        let expectation = self.expectation(description: #function)
+
+        var output: String?
+        sut.get()
+            .subscribe(onNext: { output = $0; expectation.fulfill() }, onError: { _ in XCTFail() })
+            .disposed(by: disposeBag)
+        wait(for: [expectation], timeout: 1)
+
+        XCTAssertNotNil(output)
     }
 
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+    func testAsyncByBlocking() throws {
+        let sut = Publisher()
+
+        let result = try sut.get().toBlocking().first()
+
+        XCTAssertNotNil(result)
     }
 
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
+    func testAsyncByBlockingAndMocking() throws {
+        let disposeBag = DisposeBag()
+        let sut = Mediator(observable: Observable.just("Hi!"))
+        let expectation = self.expectation(description: #function)
 
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+        var output: String?
+        sut.get()
+            .subscribe(onNext: { output = $0; expectation.fulfill() }, onError: { _ in XCTFail() })
+            .disposed(by: disposeBag)
+        wait(for: [expectation], timeout: 1)
+
+        XCTAssertEqual(output, "Hi!")
+    }
+}
+
+private class Publisher {
+    func get() -> Observable<String> {
+        let observable = Observable<String>.create { (observer) -> Disposable in
+            let disposable = Disposables.create()
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5, execute: {
+                observer.onNext("Hi")
+            })
+            return disposable
         }
+        return observable
+    }
+}
+
+private class Mediator {
+    private let observable: Observable<String>
+
+    init(observable: Observable<String>) {
+        self.observable = observable
+    }
+
+    func get() -> Observable<String> {
+        return observable
     }
 
 }
