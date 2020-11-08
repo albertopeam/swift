@@ -12,6 +12,7 @@
 		D3D79B8525588AA400639791 /* SongsViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D79B8425588AA400639791 /* SongsViewState.swift */; };
 		D3D79B892558941C00639791 /* SongView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D79B882558941C00639791 /* SongView.swift */; };
 		D3D79B8D255894A900639791 /* KingfisherSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = D3D79B8C255894A900639791 /* KingfisherSwiftUI */; };
+		D3D79B96255897D500639791 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D79B95255897D500639791 /* CardView.swift */; };
 		D3E1A3D72506BCA900C1085D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E1A3D62506BCA900C1085D /* AppDelegate.swift */; };
 		D3E1A3D92506BCA900C1085D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E1A3D82506BCA900C1085D /* SceneDelegate.swift */; };
 		D3E1A3DB2506BCA900C1085D /* SongsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E1A3DA2506BCA900C1085D /* SongsView.swift */; };
@@ -28,6 +29,7 @@
 		D39AB1212557FC38007F1C65 /* SongViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongViewModel.swift; sourceTree = "<group>"; };
 		D3D79B8425588AA400639791 /* SongsViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongsViewState.swift; sourceTree = "<group>"; };
 		D3D79B882558941C00639791 /* SongView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongView.swift; sourceTree = "<group>"; };
+		D3D79B95255897D500639791 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		D3E1A3D32506BCA900C1085D /* CleanArchitecture.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CleanArchitecture.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3E1A3D62506BCA900C1085D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D3E1A3D82506BCA900C1085D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -86,6 +88,7 @@
 				D3D79B8425588AA400639791 /* SongsViewState.swift */,
 				D39AB1212557FC38007F1C65 /* SongViewModel.swift */,
 				D3D79B882558941C00639791 /* SongView.swift */,
+				D3D79B95255897D500639791 /* CardView.swift */,
 				D3E1A3DC2506BCAE00C1085D /* Assets.xcassets */,
 				D3E1A3E12506BCAE00C1085D /* LaunchScreen.storyboard */,
 				D3E1A3E42506BCAE00C1085D /* Info.plist */,
@@ -195,6 +198,7 @@
 				D3D79B892558941C00639791 /* SongView.swift in Sources */,
 				D3D79B8525588AA400639791 /* SongsViewState.swift in Sources */,
 				D3E1A3D92506BCA900C1085D /* SceneDelegate.swift in Sources */,
+				D3D79B96255897D500639791 /* CardView.swift in Sources */,
 				D3E1A3DB2506BCA900C1085D /* SongsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

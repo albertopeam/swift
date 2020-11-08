@@ -14,7 +14,10 @@ struct SongsView: View {
     @ObservedObject private(set) var viewModel: SongsViewModel = .init()
     let artistId: String
 
-    var body: some View {        
+    var body: some View {
+        UITableView.appearance().backgroundColor = .clear
+        UITableViewCell.appearance().backgroundColor = .clear
+
         if viewModel.state.isLoading {
             return AnyView(ProgressView().onAppear(perform: { self.viewModel.songs(for: self.artistId) }))
         } else if let error = viewModel.state.error {
@@ -26,13 +29,17 @@ struct SongsView: View {
         } else if !viewModel.state.songs.isEmpty {
             return AnyView(
                 NavigationView {
-                    List(viewModel.state.songs) { SongView(songViewModel: $0) }
-                        .navigationBarTitle("Top Songs")
-                        .navigationBarItems(trailing: Button.init(action: {
-                            self.viewModel.songs(for: self.artistId)
-                        }, label: {
-                            Image(systemName: "goforward")
-                        }))
+                    List(viewModel.state.songs) {
+                        CardView(anyView: AnyView(SongView(songViewModel: $0)))
+                    }
+                    .listStyle(PlainListStyle())
+                    .listRowInsets(EdgeInsets())
+                    .navigationBarTitle("Top Songs")
+                    .navigationBarItems(trailing: Button.init(action: {
+                        self.viewModel.songs(for: self.artistId)
+                    }, label: {
+                        Image(systemName: "goforward")
+                    }))
                 }
             )
         } else {
