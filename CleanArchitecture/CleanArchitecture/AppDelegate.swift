@@ -33,8 +33,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 }
 
-/*
- PROS:
- CONTRAS:
-    reselect target to recompile? it happens first time the packages was added, check again
- */
+//TODO: use injector
+//TODO: hide dependencies
