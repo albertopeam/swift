@@ -11,7 +11,7 @@ public struct ApiImplementation: Api {
     }
 
     public func songs(for artistId: String) -> AnyPublisher<[Song], Error> {
-        guard let url = URL(string: "https://github.com/albertopeam/swift/tree/master/CleanArchitecture/CleanArchitecture/Adapters/Sources/Adapters/items.json") else { fatalError("Invalid url") }
+        guard let url = URL(string: "https://raw.githubusercontent.com/albertopeam/swift/master/CleanArchitecture/CleanArchitecture/Adapters/Sources/Adapters/items.json") else { fatalError("Invalid url") }
         return urlSession
             .dataTaskPublisher(for: url)
             .map(\.data)
