@@ -7,9 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D39AB1202557FBAE007F1C65 /* SongsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39AB11F2557FBAE007F1C65 /* SongsViewModel.swift */; };
+		D39AB1222557FC38007F1C65 /* SongViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39AB1212557FC38007F1C65 /* SongViewModel.swift */; };
+		D3D79B8525588AA400639791 /* SongsViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D79B8425588AA400639791 /* SongsViewState.swift */; };
+		D3D79B892558941C00639791 /* SongView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D79B882558941C00639791 /* SongView.swift */; };
+		D3D79B8D255894A900639791 /* KingfisherSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = D3D79B8C255894A900639791 /* KingfisherSwiftUI */; };
 		D3E1A3D72506BCA900C1085D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E1A3D62506BCA900C1085D /* AppDelegate.swift */; };
 		D3E1A3D92506BCA900C1085D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E1A3D82506BCA900C1085D /* SceneDelegate.swift */; };
-		D3E1A3DB2506BCA900C1085D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E1A3DA2506BCA900C1085D /* ContentView.swift */; };
+		D3E1A3DB2506BCA900C1085D /* SongsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E1A3DA2506BCA900C1085D /* SongsView.swift */; };
 		D3E1A3DD2506BCAE00C1085D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3E1A3DC2506BCAE00C1085D /* Assets.xcassets */; };
 		D3E1A3E02506BCAE00C1085D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3E1A3DF2506BCAE00C1085D /* Preview Assets.xcassets */; };
 		D3E1A3E32506BCAE00C1085D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3E1A3E12506BCAE00C1085D /* LaunchScreen.storyboard */; };
@@ -19,10 +24,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D39AB11F2557FBAE007F1C65 /* SongsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongsViewModel.swift; sourceTree = "<group>"; };
+		D39AB1212557FC38007F1C65 /* SongViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongViewModel.swift; sourceTree = "<group>"; };
+		D3D79B8425588AA400639791 /* SongsViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongsViewState.swift; sourceTree = "<group>"; };
+		D3D79B882558941C00639791 /* SongView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongView.swift; sourceTree = "<group>"; };
 		D3E1A3D32506BCA900C1085D /* CleanArchitecture.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CleanArchitecture.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3E1A3D62506BCA900C1085D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D3E1A3D82506BCA900C1085D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		D3E1A3DA2506BCA900C1085D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		D3E1A3DA2506BCA900C1085D /* SongsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongsView.swift; sourceTree = "<group>"; };
 		D3E1A3DC2506BCAE00C1085D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D3E1A3DF2506BCAE00C1085D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D3E1A3E22506BCAE00C1085D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -39,6 +48,7 @@
 			files = (
 				D3FAC8902506C173005CE982 /* Application in Frameworks */,
 				D3FAC8972506C64C005CE982 /* Adapters in Frameworks */,
+				D3D79B8D255894A900639791 /* KingfisherSwiftUI in Frameworks */,
 				D3FAC8942506C5BD005CE982 /* Entities in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -71,7 +81,11 @@
 				D3FAC88D2506BFB2005CE982 /* Entities */,
 				D3E1A3D62506BCA900C1085D /* AppDelegate.swift */,
 				D3E1A3D82506BCA900C1085D /* SceneDelegate.swift */,
-				D3E1A3DA2506BCA900C1085D /* ContentView.swift */,
+				D3E1A3DA2506BCA900C1085D /* SongsView.swift */,
+				D39AB11F2557FBAE007F1C65 /* SongsViewModel.swift */,
+				D3D79B8425588AA400639791 /* SongsViewState.swift */,
+				D39AB1212557FC38007F1C65 /* SongViewModel.swift */,
+				D3D79B882558941C00639791 /* SongView.swift */,
 				D3E1A3DC2506BCAE00C1085D /* Assets.xcassets */,
 				D3E1A3E12506BCAE00C1085D /* LaunchScreen.storyboard */,
 				D3E1A3E42506BCAE00C1085D /* Info.plist */,
@@ -115,6 +129,7 @@
 				D3FAC88F2506C173005CE982 /* Application */,
 				D3FAC8932506C5BD005CE982 /* Entities */,
 				D3FAC8962506C64C005CE982 /* Adapters */,
+				D3D79B8C255894A900639791 /* KingfisherSwiftUI */,
 			);
 			productName = CleanArchitecture;
 			productReference = D3E1A3D32506BCA900C1085D /* CleanArchitecture.app */;
@@ -144,6 +159,9 @@
 				Base,
 			);
 			mainGroup = D3E1A3CA2506BCA900C1085D;
+			packageReferences = (
+				D3D79B8B255894A900639791 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = D3E1A3D42506BCA900C1085D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -172,8 +190,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				D3E1A3D72506BCA900C1085D /* AppDelegate.swift in Sources */,
+				D39AB1222557FC38007F1C65 /* SongViewModel.swift in Sources */,
+				D39AB1202557FBAE007F1C65 /* SongsViewModel.swift in Sources */,
+				D3D79B892558941C00639791 /* SongView.swift in Sources */,
+				D3D79B8525588AA400639791 /* SongsViewState.swift in Sources */,
 				D3E1A3D92506BCA900C1085D /* SceneDelegate.swift in Sources */,
-				D3E1A3DB2506BCA900C1085D /* ContentView.swift in Sources */,
+				D3E1A3DB2506BCA900C1085D /* SongsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -241,7 +263,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -295,7 +317,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -314,6 +336,7 @@
 				DEVELOPMENT_TEAM = U36872D6G6;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = CleanArchitecture/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -334,6 +357,7 @@
 				DEVELOPMENT_TEAM = U36872D6G6;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = CleanArchitecture/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -368,7 +392,23 @@
 		};
 /* End XCConfigurationList section */
 
+/* Begin XCRemoteSwiftPackageReference section */
+		D3D79B8B255894A900639791 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.15.7;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
 /* Begin XCSwiftPackageProductDependency section */
+		D3D79B8C255894A900639791 /* KingfisherSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D3D79B8B255894A900639791 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = KingfisherSwiftUI;
+		};
 		D3FAC88F2506C173005CE982 /* Application */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Application;

@@ -1,6 +1,6 @@
 import Entities
+import Combine
 
-public struct UseCase {
-    public let entity: Entity = .init()
-    public init() {}
+public protocol UseCase {
+    func get(for artistId: String) -> AnyPublisher<[Song], Error>
 }
