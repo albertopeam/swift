@@ -17,6 +17,8 @@ struct MultiModuleApp: App {
         }
     }
 }
+//TODO: fix test plan
+//TODO: fix image from bundle
 
 //list test plan
 //xcodebuild -scheme MultiModule -showTestPlans
