@@ -1,0 +1,45 @@
+{
+  "configurations" : [
+    {
+      "id" : "B846296F-DF2F-4F25-91F5-E9777FADB796",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "testExecutionOrdering" : "random"
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:MultiModule\/Auth",
+        "identifier" : "AuthTests",
+        "name" : "AuthTests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:MultiModule\/Interface",
+        "identifier" : "InterfaceTests",
+        "name" : "InterfaceTests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:MultiModule\/Module1",
+        "identifier" : "Module1Tests",
+        "name" : "Module1Tests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:MultiModule\/Module2",
+        "identifier" : "Module2Tests",
+        "name" : "Module2Tests"
+      }
+    }
+  ],
+  "version" : 1
+}
