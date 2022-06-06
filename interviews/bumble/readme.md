@@ -12,6 +12,7 @@
 * AutoReleasePool
 * GCD vs OperationQueue.
 * Deadlock. NSLock, NSRecursiveLock, Semaphores and Barriers
+* MVVM explanation on how to implement theoretically an use case for showing a list of strings. Using local cache and remote. first time load from remote, when apearing again the screen fetch from cache, and if expired load from remote. UIViewController -> ViewModel -> Repository -> DataSources
 
 ## coding
 
