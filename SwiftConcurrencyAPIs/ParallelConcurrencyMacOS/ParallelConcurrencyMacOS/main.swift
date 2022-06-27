@@ -170,12 +170,6 @@ Task {
     Thread.printCurrent()
 }
 
-
-/*
-tasks and tasks groups https://developer.apple.com/documentation/swift/taskgroup
-*/
-
-
 /*
 cancellation https://developer.apple.com/documentation/swift/task
 */
@@ -194,6 +188,99 @@ Task {
     Thread.printCurrent()
 }
 
+/*
+tasks and tasks groups https://developer.apple.com/documentation/swift/taskgroup
+*/
+enum DownloadError: Error, Equatable {
+    case download
+}
+
+func photosDirectory() -> URL {
+    let fm = FileManager.default
+    let tmpDir = fm.temporaryDirectory
+    return tmpDir
+}
+
+func photos() async throws -> [String: String] {
+    try await Task.sleep(nanoseconds: oneSecNanos)
+    return [
+        "swift-og.png": "https://developer.apple.com/swift/images/swift-og.png",
+        "swift-playgrounds-og.jpg": "https://developer.apple.com/news/images/og/swift-playgrounds-og.jpg"
+    ]
+}
+
+func downloadPhoto(_ photo: String) async throws -> URL? {
+    let urlSession = URLSession.shared
+    if let url = URL(string: photo) {
+        let response = try await urlSession.download(from: url)
+        let urlResponse = response.1
+        let httpUrlResponse = try urlResponse.cast(to: HTTPURLResponse.self)
+        try httpUrlResponse.successOrThrow()
+        let downloadUrl = response.0
+        print("downloadPhoto \(downloadUrl)")
+        return downloadUrl
+    }
+    throw DownloadError.download
+}
+
+func listDownloadPhotos(_ photos: [String]) throws {
+    let url = photosDirectory()
+    let fm = FileManager.default
+    let contents = try fm.contentsOfDirectory(at: url, includingPropertiesForKeys: nil, options: .skipsHiddenFiles)
+    let urls = contents.map { $0.lastPathComponent }
+    let photoSet = Set<String>(photos)
+    let urlSet = Set<String>(urls)
+    let intersection = photoSet.intersection(urlSet)
+    print("listDownloadPhotos: \(intersection)")
+}
+
+func renamePhoto(from url: URL, to name: String) throws {
+    let fm = FileManager.default
+    let dir = photosDirectory()
+    if let nameUrl = URL(string: name, relativeTo: dir) {
+        try fm.moveItem(at: url, to: nameUrl)
+        print("renamePhoto: \(nameUrl)")
+    }
+}
+
+func removePhotos(_ photos: [String]) {
+    let fm = FileManager.default
+    let dir = photosDirectory()
+    photos.forEach { name in
+        if let url = URL(string: name, relativeTo: dir) {
+            do {
+                try fm.removeItem(at: url)
+                print("removePhoto: \(url)")
+            } catch {
+                print("NOT removePhoto: \(url)")
+            }
+        }
+    }
+}
+
+Task {
+    await withTaskGroup(of: Void.self) { taskGroup in
+        do {
+            let photos = try await photos()
+            let names = Array(photos.keys)
+            removePhotos(names)
+            for photo in photos {
+                if let downloadUrl = try await downloadPhoto(photo.value) {
+                    try renamePhoto(from: downloadUrl, to: photo.key)
+                }
+            }
+            try listDownloadPhotos(names)
+        } catch DownloadError.download {
+            print("error downloading photos")
+        } catch {
+            print("unknown error \(error)")
+        }
+    }
+}
+
+/*
+core data
+*/
 
 /*
 actors
