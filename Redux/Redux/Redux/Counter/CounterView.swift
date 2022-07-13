@@ -9,7 +9,7 @@ import SwiftUI
 import _Concurrency
 
 struct CounterView: View {
-    @StateObject private var store: CounterStore  = .init(state: .init(), reducer: Reducers.counterReducer)
+    @StateObject private var store: CounterStore  = .init(reducer: Reducers.counterReducer)
 
     var body: some View {
         VStack {
