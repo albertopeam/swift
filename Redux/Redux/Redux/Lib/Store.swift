@@ -15,16 +15,9 @@ actor Store<S: State, Action>: ObservableObject {
     private let middleware: AnyMiddleware<Action>
     private let reducer: Reducer
 
-    //TODO: not needed now. maybe let it open to inject the state? maybe not to force initial state in State protocol
-//    @MainActor init<M: Middleware>(state: S, reducer: @escaping Reducer, middleware: M) where M.Action == Action {
-//        self.state = state
-//        self.reducer = reducer
-//        self.middleware = AnyMiddleware(middleware)
-//    }
-
     init<M: Middleware>(reducer: @escaping Reducer, middleware: M) where M.Action == Action {
         self.reducer = reducer
-        self.middleware = AnyMiddleware(middleware)
+        self.middleware = middleware.eraseToAnyMiddleware()
     }
 
     convenience init(reducer: @escaping Reducer) {

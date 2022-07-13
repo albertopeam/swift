@@ -25,6 +25,7 @@
 		D3D6BAE8287F218C00FCEC30 /* Middleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D6BAE7287F218C00FCEC30 /* Middleware.swift */; };
 		D3D6BAEA287F236300FCEC30 /* AnyMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D6BAE9287F236300FCEC30 /* AnyMiddleware.swift */; };
 		D3D6BAEC287F24CB00FCEC30 /* EchoMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D6BAEB287F24CB00FCEC30 /* EchoMiddleware.swift */; };
+		D3D6BAEE287F27BF00FCEC30 /* MiddlewarePipeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D6BAED287F27BF00FCEC30 /* MiddlewarePipeline.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +67,7 @@
 		D3D6BAE7287F218C00FCEC30 /* Middleware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Middleware.swift; sourceTree = "<group>"; };
 		D3D6BAE9287F236300FCEC30 /* AnyMiddleware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyMiddleware.swift; sourceTree = "<group>"; };
 		D3D6BAEB287F24CB00FCEC30 /* EchoMiddleware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EchoMiddleware.swift; sourceTree = "<group>"; };
+		D3D6BAED287F27BF00FCEC30 /* MiddlewarePipeline.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiddlewarePipeline.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +160,7 @@
 				D3D6BAE7287F218C00FCEC30 /* Middleware.swift */,
 				D3D6BAE9287F236300FCEC30 /* AnyMiddleware.swift */,
 				D3D6BAEB287F24CB00FCEC30 /* EchoMiddleware.swift */,
+				D3D6BAED287F27BF00FCEC30 /* MiddlewarePipeline.swift */,
 				D3D6BAE0287F171200FCEC30 /* State.swift */,
 				D3D6BAD1287EF0A900FCEC30 /* Store.swift */,
 			);
@@ -349,6 +352,7 @@
 				D3D6BAEC287F24CB00FCEC30 /* EchoMiddleware.swift in Sources */,
 				D3D6BAEA287F236300FCEC30 /* AnyMiddleware.swift in Sources */,
 				D3D6BAD9287EF46A00FCEC30 /* CounterAction.swift in Sources */,
+				D3D6BAEE287F27BF00FCEC30 /* MiddlewarePipeline.swift in Sources */,
 				D3D6BADD287EF52C00FCEC30 /* Reducers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
