@@ -15,9 +15,16 @@ struct CounterView: View {
     var body: some View {
         VStack {
             Text("Count \(store.state.count)")
-            Button("+") {
-                Task {
-                    await store.dispatch(action: .add)
+            HStack {
+                Button("-") {
+                    Task {
+                        await store.dispatch(action: .subtract)
+                    }
+                }
+                Button("+") {
+                    Task {
+                        await store.dispatch(action: .add)
+                    }
                 }
             }
         }.padding()

@@ -12,6 +12,8 @@ extension Reducers {
         switch action {
             case .add:
                 return .init(count: state.count + 1)
+            case .subtract:
+                return .init(count: state.count - 1)
         }
     }
 }

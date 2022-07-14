@@ -9,4 +9,5 @@ import Foundation
 
 enum CounterAction: Equatable {
     case add
+    case subtract
 }
