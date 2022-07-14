@@ -14,6 +14,14 @@ struct MiddlewarePipeline<Action>: Middleware {
         self.middleware = middleware.map { AnyMiddleware<Action>($0) }
     }
 
+    init(_ middleware: AnyMiddleware<Action>...) {
+        self.middleware = middleware
+    }
+
+    init(_ middleware: [AnyMiddleware<Action>]) {
+        self.middleware = middleware
+    }
+
     func callAsFunction(action: Action) async -> Action? {
         var currentAction: Action = action
         for m in middleware {

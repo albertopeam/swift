@@ -8,6 +8,8 @@
 import Foundation
 import _Concurrency
 
+//TODO: entender como va a funcionar esto con acciones async
+//TODO: use some/any instead of AnyMiddleware
 actor Store<S: State, Action>: ObservableObject {
     typealias Reducer = (S, Action) async -> S
 
@@ -15,13 +17,15 @@ actor Store<S: State, Action>: ObservableObject {
     private let middleware: AnyMiddleware<Action>
     private let reducer: Reducer
 
-    init<M: Middleware>(reducer: @escaping Reducer, middleware: M) where M.Action == Action {
+    init<M: Middleware>(reducer: @escaping Reducer,
+                        @MiddlewareBuilder<Action> middleware: () -> M) where M.Action == Action {
         self.reducer = reducer
-        self.middleware = middleware.eraseToAnyMiddleware()
+        self.middleware = middleware().eraseToAnyMiddleware()
     }
 
     convenience init(reducer: @escaping Reducer) {
-        self.init(reducer: reducer, middleware: EchoMiddleware<Action>())
+        self.init(reducer: reducer,
+                  middleware: { EchoMiddleware<Action>() })
     }
 
     func dispatch(action: Action) async {
