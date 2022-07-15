@@ -8,8 +8,6 @@
 import Foundation
 import _Concurrency
 
-//TODO: entender como va a funcionar esto con acciones async
-//TODO: use some/any instead of AnyMiddleware
 actor Store<S: State, Action>: ObservableObject {
     typealias Reducer = (S, Action) async -> S
 

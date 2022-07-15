@@ -19,6 +19,13 @@
 		D324F0662880708F00BCEADB /* Store+AsyncSequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = D324F0652880708F00BCEADB /* Store+AsyncSequence.swift */; };
 		D324F068288070C100BCEADB /* Store+Future.swift in Sources */ = {isa = PBXBuildFile; fileRef = D324F067288070C100BCEADB /* Store+Future.swift */; };
 		D324F06A288070DE00BCEADB /* Store+Publisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = D324F069288070DE00BCEADB /* Store+Publisher.swift */; };
+		D324F06D2880728900BCEADB /* AsyncCounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D324F06C2880728900BCEADB /* AsyncCounterView.swift */; };
+		D324F0702880B27500BCEADB /* AsyncCounterState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D324F06F2880B27500BCEADB /* AsyncCounterState.swift */; };
+		D324F0722880B2B000BCEADB /* AsyncCounterStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D324F0712880B2B000BCEADB /* AsyncCounterStore.swift */; };
+		D324F0742880B34300BCEADB /* AsyncCounterAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = D324F0732880B34300BCEADB /* AsyncCounterAction.swift */; };
+		D324F0762880B3A900BCEADB /* AsyncCounterReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D324F0752880B3A900BCEADB /* AsyncCounterReducer.swift */; };
+		D324F0792880B59900BCEADB /* AnalyticsMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = D324F0782880B59900BCEADB /* AnalyticsMiddleware.swift */; };
+		D324F07B28813EAE00BCEADB /* ProgressView+Visibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = D324F07A28813EAE00BCEADB /* ProgressView+Visibility.swift */; };
 		D3D6BAD2287EF0A900FCEC30 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D6BAD1287EF0A900FCEC30 /* Store.swift */; };
 		D3D6BAD6287EF41600FCEC30 /* CounterState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D6BAD5287EF41600FCEC30 /* CounterState.swift */; };
 		D3D6BAD9287EF46A00FCEC30 /* CounterAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D6BAD8287EF46A00FCEC30 /* CounterAction.swift */; };
@@ -66,6 +73,13 @@
 		D324F0652880708F00BCEADB /* Store+AsyncSequence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Store+AsyncSequence.swift"; sourceTree = "<group>"; };
 		D324F067288070C100BCEADB /* Store+Future.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Store+Future.swift"; sourceTree = "<group>"; };
 		D324F069288070DE00BCEADB /* Store+Publisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Store+Publisher.swift"; sourceTree = "<group>"; };
+		D324F06C2880728900BCEADB /* AsyncCounterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncCounterView.swift; sourceTree = "<group>"; };
+		D324F06F2880B27500BCEADB /* AsyncCounterState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncCounterState.swift; sourceTree = "<group>"; };
+		D324F0712880B2B000BCEADB /* AsyncCounterStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncCounterStore.swift; sourceTree = "<group>"; };
+		D324F0732880B34300BCEADB /* AsyncCounterAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncCounterAction.swift; sourceTree = "<group>"; };
+		D324F0752880B3A900BCEADB /* AsyncCounterReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncCounterReducer.swift; sourceTree = "<group>"; };
+		D324F0782880B59900BCEADB /* AnalyticsMiddleware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsMiddleware.swift; sourceTree = "<group>"; };
+		D324F07A28813EAE00BCEADB /* ProgressView+Visibility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProgressView+Visibility.swift"; sourceTree = "<group>"; };
 		D3D6BAD1287EF0A900FCEC30 /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 		D3D6BAD5287EF41600FCEC30 /* CounterState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterState.swift; sourceTree = "<group>"; };
 		D3D6BAD8287EF46A00FCEC30 /* CounterAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterAction.swift; sourceTree = "<group>"; };
@@ -128,10 +142,12 @@
 		D31529E6287B5F8300E85D56 /* Redux */ = {
 			isa = PBXGroup;
 			children = (
+				D324F06B2880724700BCEADB /* AsyncCounter */,
 				D3D6BAD4287EF40200FCEC30 /* Counter */,
 				D3D6BAD3287EF0AD00FCEC30 /* Lib */,
 				D31529E7287B5F8300E85D56 /* ReduxApp.swift */,
 				D3D6BADC287EF52C00FCEC30 /* Reducers.swift */,
+				D324F07A28813EAE00BCEADB /* ProgressView+Visibility.swift */,
 				D31529EB287B5F8500E85D56 /* Assets.xcassets */,
 				D31529ED287B5F8500E85D56 /* Preview Content */,
 			);
@@ -162,6 +178,27 @@
 				D3152A04287B5F8500E85D56 /* ReduxUITestsLaunchTests.swift */,
 			);
 			path = ReduxUITests;
+			sourceTree = "<group>";
+		};
+		D324F06B2880724700BCEADB /* AsyncCounter */ = {
+			isa = PBXGroup;
+			children = (
+				D324F06E2880B26000BCEADB /* Model */,
+				D324F06C2880728900BCEADB /* AsyncCounterView.swift */,
+			);
+			path = AsyncCounter;
+			sourceTree = "<group>";
+		};
+		D324F06E2880B26000BCEADB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D324F0782880B59900BCEADB /* AnalyticsMiddleware.swift */,
+				D324F06F2880B27500BCEADB /* AsyncCounterState.swift */,
+				D324F0712880B2B000BCEADB /* AsyncCounterStore.swift */,
+				D324F0732880B34300BCEADB /* AsyncCounterAction.swift */,
+				D324F0752880B3A900BCEADB /* AsyncCounterReducer.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		D3D6BAD3287EF0AD00FCEC30 /* Lib */ = {
@@ -361,14 +398,21 @@
 				D3D6BAD2287EF0A900FCEC30 /* Store.swift in Sources */,
 				D3D6BADB287EF47C00FCEC30 /* CounterReducer.swift in Sources */,
 				D3D6BADF287EF9B800FCEC30 /* CounterStore.swift in Sources */,
+				D324F0742880B34300BCEADB /* AsyncCounterAction.swift in Sources */,
+				D324F0702880B27500BCEADB /* AsyncCounterState.swift in Sources */,
 				D324F0662880708F00BCEADB /* Store+AsyncSequence.swift in Sources */,
+				D324F06D2880728900BCEADB /* AsyncCounterView.swift in Sources */,
 				D31529EA287B5F8300E85D56 /* CounterView.swift in Sources */,
+				D324F0762880B3A900BCEADB /* AsyncCounterReducer.swift in Sources */,
 				D3D6BAD6287EF41600FCEC30 /* CounterState.swift in Sources */,
 				D3D6BAE8287F218C00FCEC30 /* Middleware.swift in Sources */,
+				D324F0722880B2B000BCEADB /* AsyncCounterStore.swift in Sources */,
 				D3D6BAE1287F171200FCEC30 /* State.swift in Sources */,
+				D324F07B28813EAE00BCEADB /* ProgressView+Visibility.swift in Sources */,
 				D31529E8287B5F8300E85D56 /* ReduxApp.swift in Sources */,
 				D3D6BAEC287F24CB00FCEC30 /* EchoMiddleware.swift in Sources */,
 				D324F06228806D3000BCEADB /* MiddlewareBuilder.swift in Sources */,
+				D324F0792880B59900BCEADB /* AnalyticsMiddleware.swift in Sources */,
 				D3D6BAEA287F236300FCEC30 /* AnyMiddleware.swift in Sources */,
 				D3D6BAD9287EF46A00FCEC30 /* CounterAction.swift in Sources */,
 				D3D6BAEE287F27BF00FCEC30 /* MiddlewarePipeline.swift in Sources */,

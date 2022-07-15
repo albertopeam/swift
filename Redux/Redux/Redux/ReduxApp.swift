@@ -12,6 +12,7 @@ struct ReduxApp: App {
     var body: some Scene {
         WindowGroup {
             CounterView()
+            AsyncCounterView()
         }
     }
 }

@@ -9,7 +9,7 @@ import Foundation
 
 struct LogMiddleware<Action>: Middleware {
     func callAsFunction(action: Action) async -> Action? {
-        print("\(action)")
+        print("Log \(action)")
         return action
     }
 }

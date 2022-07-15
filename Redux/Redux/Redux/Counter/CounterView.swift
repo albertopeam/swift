@@ -9,12 +9,12 @@ import SwiftUI
 import _Concurrency
 
 struct CounterView: View {
-    @StateObject private var store: CounterStore  = .init(reducer: Reducers.counterReducer,
+    @StateObject private var store: CounterStore = .init(reducer: Reducers.counterReducer,
                                                           middleware: { LogMiddleware() })
 
     var body: some View {
         VStack {
-            Text("Count \(store.state.count)")
+            Text("Sync counter \(store.state.count)")
             HStack {
                 Button("-") {
                     Task {
