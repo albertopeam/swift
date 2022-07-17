@@ -13,6 +13,7 @@ struct ReduxApp: App {
         WindowGroup {
             CounterView()
             AsyncCounterView()
+            AsyncStreamView()
         }
     }
 }

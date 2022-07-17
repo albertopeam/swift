@@ -26,6 +26,14 @@
 		D324F0762880B3A900BCEADB /* AsyncCounterReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D324F0752880B3A900BCEADB /* AsyncCounterReducer.swift */; };
 		D324F0792880B59900BCEADB /* AnalyticsMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = D324F0782880B59900BCEADB /* AnalyticsMiddleware.swift */; };
 		D324F07B28813EAE00BCEADB /* ProgressView+Visibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = D324F07A28813EAE00BCEADB /* ProgressView+Visibility.swift */; };
+		D3B65F1E28842DD300814435 /* AsyncStreamAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B65F1D28842DD300814435 /* AsyncStreamAction.swift */; };
+		D3B65F2028842DF800814435 /* AsyncStreamState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B65F1F28842DF800814435 /* AsyncStreamState.swift */; };
+		D3B65F2228842E1500814435 /* AsyncStreamStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B65F2128842E1500814435 /* AsyncStreamStore.swift */; };
+		D3B65F2428842F9400814435 /* AsyncSteamAnalyticsMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B65F2328842F9400814435 /* AsyncSteamAnalyticsMiddleware.swift */; };
+		D3B65F272884311700814435 /* Stream.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B65F262884311700814435 /* Stream.swift */; };
+		D3B65F292884315E00814435 /* StreamIterator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B65F282884315E00814435 /* StreamIterator.swift */; };
+		D3B65F2B2884342400814435 /* StoreV3.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B65F2A2884342400814435 /* StoreV3.swift */; };
+		D3B65F2D2884343A00814435 /* StoreV2.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B65F2C2884343A00814435 /* StoreV2.swift */; };
 		D3D6BAD2287EF0A900FCEC30 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D6BAD1287EF0A900FCEC30 /* Store.swift */; };
 		D3D6BAD6287EF41600FCEC30 /* CounterState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D6BAD5287EF41600FCEC30 /* CounterState.swift */; };
 		D3D6BAD9287EF46A00FCEC30 /* CounterAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D6BAD8287EF46A00FCEC30 /* CounterAction.swift */; };
@@ -38,6 +46,9 @@
 		D3D6BAEA287F236300FCEC30 /* AnyMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D6BAE9287F236300FCEC30 /* AnyMiddleware.swift */; };
 		D3D6BAEC287F24CB00FCEC30 /* EchoMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D6BAEB287F24CB00FCEC30 /* EchoMiddleware.swift */; };
 		D3D6BAEE287F27BF00FCEC30 /* MiddlewarePipeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D6BAED287F27BF00FCEC30 /* MiddlewarePipeline.swift */; };
+		D3F6E22B2881BDDD005834AB /* Button+Enabled.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F6E22A2881BDDD005834AB /* Button+Enabled.swift */; };
+		D3F6E22F2882E3A6005834AB /* AsyncStreamReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F6E22E2882E3A6005834AB /* AsyncStreamReducer.swift */; };
+		D3F6E2312883325A005834AB /* AsyncStreamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F6E2302883325A005834AB /* AsyncStreamView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +91,14 @@
 		D324F0752880B3A900BCEADB /* AsyncCounterReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncCounterReducer.swift; sourceTree = "<group>"; };
 		D324F0782880B59900BCEADB /* AnalyticsMiddleware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsMiddleware.swift; sourceTree = "<group>"; };
 		D324F07A28813EAE00BCEADB /* ProgressView+Visibility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProgressView+Visibility.swift"; sourceTree = "<group>"; };
+		D3B65F1D28842DD300814435 /* AsyncStreamAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncStreamAction.swift; sourceTree = "<group>"; };
+		D3B65F1F28842DF800814435 /* AsyncStreamState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncStreamState.swift; sourceTree = "<group>"; };
+		D3B65F2128842E1500814435 /* AsyncStreamStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncStreamStore.swift; sourceTree = "<group>"; };
+		D3B65F2328842F9400814435 /* AsyncSteamAnalyticsMiddleware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncSteamAnalyticsMiddleware.swift; sourceTree = "<group>"; };
+		D3B65F262884311700814435 /* Stream.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stream.swift; sourceTree = "<group>"; };
+		D3B65F282884315E00814435 /* StreamIterator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamIterator.swift; sourceTree = "<group>"; };
+		D3B65F2A2884342400814435 /* StoreV3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreV3.swift; sourceTree = "<group>"; };
+		D3B65F2C2884343A00814435 /* StoreV2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreV2.swift; sourceTree = "<group>"; };
 		D3D6BAD1287EF0A900FCEC30 /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 		D3D6BAD5287EF41600FCEC30 /* CounterState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterState.swift; sourceTree = "<group>"; };
 		D3D6BAD8287EF46A00FCEC30 /* CounterAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterAction.swift; sourceTree = "<group>"; };
@@ -92,6 +111,9 @@
 		D3D6BAE9287F236300FCEC30 /* AnyMiddleware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyMiddleware.swift; sourceTree = "<group>"; };
 		D3D6BAEB287F24CB00FCEC30 /* EchoMiddleware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EchoMiddleware.swift; sourceTree = "<group>"; };
 		D3D6BAED287F27BF00FCEC30 /* MiddlewarePipeline.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiddlewarePipeline.swift; sourceTree = "<group>"; };
+		D3F6E22A2881BDDD005834AB /* Button+Enabled.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Button+Enabled.swift"; sourceTree = "<group>"; };
+		D3F6E22E2882E3A6005834AB /* AsyncStreamReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncStreamReducer.swift; sourceTree = "<group>"; };
+		D3F6E2302883325A005834AB /* AsyncStreamView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncStreamView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,12 +164,13 @@
 		D31529E6287B5F8300E85D56 /* Redux */ = {
 			isa = PBXGroup;
 			children = (
+				D3B65F1B28842D8F00814435 /* AsyncStreamCounter */,
+				D3F6E22C2881BDEA005834AB /* SwiftUIExtensions */,
 				D324F06B2880724700BCEADB /* AsyncCounter */,
 				D3D6BAD4287EF40200FCEC30 /* Counter */,
 				D3D6BAD3287EF0AD00FCEC30 /* Lib */,
 				D31529E7287B5F8300E85D56 /* ReduxApp.swift */,
 				D3D6BADC287EF52C00FCEC30 /* Reducers.swift */,
-				D324F07A28813EAE00BCEADB /* ProgressView+Visibility.swift */,
 				D31529EB287B5F8500E85D56 /* Assets.xcassets */,
 				D31529ED287B5F8500E85D56 /* Preview Content */,
 			);
@@ -201,7 +224,37 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		D3D6BAD3287EF0AD00FCEC30 /* Lib */ = {
+		D3B65F1B28842D8F00814435 /* AsyncStreamCounter */ = {
+			isa = PBXGroup;
+			children = (
+				D3B65F1C28842DA300814435 /* Model */,
+				D3F6E2302883325A005834AB /* AsyncStreamView.swift */,
+			);
+			path = AsyncStreamCounter;
+			sourceTree = "<group>";
+		};
+		D3B65F1C28842DA300814435 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D3F6E22E2882E3A6005834AB /* AsyncStreamReducer.swift */,
+				D3B65F1D28842DD300814435 /* AsyncStreamAction.swift */,
+				D3B65F1F28842DF800814435 /* AsyncStreamState.swift */,
+				D3B65F2128842E1500814435 /* AsyncStreamStore.swift */,
+				D3B65F2328842F9400814435 /* AsyncSteamAnalyticsMiddleware.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D3B65F252884310D00814435 /* Stream */ = {
+			isa = PBXGroup;
+			children = (
+				D3B65F262884311700814435 /* Stream.swift */,
+				D3B65F282884315E00814435 /* StreamIterator.swift */,
+			);
+			path = Stream;
+			sourceTree = "<group>";
+		};
+		D3B65F2E2884345600814435 /* Middleware */ = {
 			isa = PBXGroup;
 			children = (
 				D3D6BAE9287F236300FCEC30 /* AnyMiddleware.swift */,
@@ -210,8 +263,19 @@
 				D3D6BAE7287F218C00FCEC30 /* Middleware.swift */,
 				D324F06128806D3000BCEADB /* MiddlewareBuilder.swift */,
 				D3D6BAED287F27BF00FCEC30 /* MiddlewarePipeline.swift */,
+			);
+			path = Middleware;
+			sourceTree = "<group>";
+		};
+		D3D6BAD3287EF0AD00FCEC30 /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+				D3B65F2E2884345600814435 /* Middleware */,
+				D3B65F252884310D00814435 /* Stream */,
 				D3D6BAE0287F171200FCEC30 /* State.swift */,
 				D3D6BAD1287EF0A900FCEC30 /* Store.swift */,
+				D3B65F2C2884343A00814435 /* StoreV2.swift */,
+				D3B65F2A2884342400814435 /* StoreV3.swift */,
 				D324F0652880708F00BCEADB /* Store+AsyncSequence.swift */,
 				D324F067288070C100BCEADB /* Store+Future.swift */,
 				D324F069288070DE00BCEADB /* Store+Publisher.swift */,
@@ -261,6 +325,15 @@
 				D3D6BAE5287F1A1E00FCEC30 /* StoreTests.swift */,
 			);
 			path = Lib;
+			sourceTree = "<group>";
+		};
+		D3F6E22C2881BDEA005834AB /* SwiftUIExtensions */ = {
+			isa = PBXGroup;
+			children = (
+				D324F07A28813EAE00BCEADB /* ProgressView+Visibility.swift */,
+				D3F6E22A2881BDDD005834AB /* Button+Enabled.swift */,
+			);
+			path = SwiftUIExtensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -393,6 +466,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3F6E22F2882E3A6005834AB /* AsyncStreamReducer.swift in Sources */,
 				D324F06A288070DE00BCEADB /* Store+Publisher.swift in Sources */,
 				D324F068288070C100BCEADB /* Store+Future.swift in Sources */,
 				D3D6BAD2287EF0A900FCEC30 /* Store.swift in Sources */,
@@ -400,21 +474,31 @@
 				D3D6BADF287EF9B800FCEC30 /* CounterStore.swift in Sources */,
 				D324F0742880B34300BCEADB /* AsyncCounterAction.swift in Sources */,
 				D324F0702880B27500BCEADB /* AsyncCounterState.swift in Sources */,
+				D3B65F2028842DF800814435 /* AsyncStreamState.swift in Sources */,
+				D3B65F2D2884343A00814435 /* StoreV2.swift in Sources */,
+				D3F6E22B2881BDDD005834AB /* Button+Enabled.swift in Sources */,
 				D324F0662880708F00BCEADB /* Store+AsyncSequence.swift in Sources */,
 				D324F06D2880728900BCEADB /* AsyncCounterView.swift in Sources */,
+				D3B65F2428842F9400814435 /* AsyncSteamAnalyticsMiddleware.swift in Sources */,
 				D31529EA287B5F8300E85D56 /* CounterView.swift in Sources */,
+				D3B65F2B2884342400814435 /* StoreV3.swift in Sources */,
+				D3B65F1E28842DD300814435 /* AsyncStreamAction.swift in Sources */,
 				D324F0762880B3A900BCEADB /* AsyncCounterReducer.swift in Sources */,
 				D3D6BAD6287EF41600FCEC30 /* CounterState.swift in Sources */,
 				D3D6BAE8287F218C00FCEC30 /* Middleware.swift in Sources */,
 				D324F0722880B2B000BCEADB /* AsyncCounterStore.swift in Sources */,
+				D3B65F292884315E00814435 /* StreamIterator.swift in Sources */,
 				D3D6BAE1287F171200FCEC30 /* State.swift in Sources */,
 				D324F07B28813EAE00BCEADB /* ProgressView+Visibility.swift in Sources */,
+				D3F6E2312883325A005834AB /* AsyncStreamView.swift in Sources */,
+				D3B65F272884311700814435 /* Stream.swift in Sources */,
 				D31529E8287B5F8300E85D56 /* ReduxApp.swift in Sources */,
 				D3D6BAEC287F24CB00FCEC30 /* EchoMiddleware.swift in Sources */,
 				D324F06228806D3000BCEADB /* MiddlewareBuilder.swift in Sources */,
 				D324F0792880B59900BCEADB /* AnalyticsMiddleware.swift in Sources */,
 				D3D6BAEA287F236300FCEC30 /* AnyMiddleware.swift in Sources */,
 				D3D6BAD9287EF46A00FCEC30 /* CounterAction.swift in Sources */,
+				D3B65F2228842E1500814435 /* AsyncStreamStore.swift in Sources */,
 				D3D6BAEE287F27BF00FCEC30 /* MiddlewarePipeline.swift in Sources */,
 				D3D6BADD287EF52C00FCEC30 /* Reducers.swift in Sources */,
 				D324F06428806D7B00BCEADB /* LogMiddleware.swift in Sources */,

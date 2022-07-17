@@ -7,4 +7,4 @@
 
 import Foundation
 
-typealias AsyncCounterStore = Store<AsyncCounterState, AsyncCounterAction>
+typealias AsyncCounterStore = StoreV2<AsyncCounterState, AsyncCounterAction>

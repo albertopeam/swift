@@ -1,19 +1,18 @@
 //
-//  CollectionView.swift
+//  AsyncStream.swift
 //  Redux
 //
-//  Created by Alberto Penas Amor on 14/7/22.
+//  Created by Alberto Penas Amor on 16/7/22.
 //
 
-import Foundation
 import SwiftUI
 
-struct AsyncCounterView: View {
-    @StateObject private var store: AsyncCounterStore =
-        .init(reducer: Reducers.acrv2(state:action:),
+struct AsyncStreamView: View {
+    @StateObject private var store: AsyncStreamStore =
+        .init(reducer: AsyncStreamReducer.reducer,
               middleware: {
-            LogMiddleware<AsyncCounterAction>()
-            AnalyticsMiddleware()
+            LogMiddleware<AsyncStreamAction>()
+            AsyncSteamAnalyticsMiddleware()
         })
 
     var body: some View {
@@ -22,7 +21,7 @@ struct AsyncCounterView: View {
                 ProgressView()
                     .isShown(store.state.isLoading)
                     .progressViewStyle(CircularProgressViewStyle())
-                Text("Async counter \(store.state.count)")
+                Text("Async Stream counter \(store.state.count)")
             }
             HStack {
                 Button("-") {
@@ -37,9 +36,13 @@ struct AsyncCounterView: View {
                     }
                 }
                 .disabled(store.state.isLoading)
+                Button("reset") {
+                    Task {
+                        await store.dispatch(action: .reset)
+                    }
+                }
+                .disabled(store.state.isLoading)
             }
-        }.padding()
+        }
     }
 }
-
-

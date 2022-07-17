@@ -11,4 +11,6 @@ enum AsyncCounterAction: Equatable {
     case add
     case subtract
     case reset
+    case _add
+    case _subtract
 }

@@ -9,18 +9,23 @@ import Foundation
 import _Concurrency
 
 extension Reducers {
-    private static let oneSecondNanos: UInt64 = 2_000_000_000
+    private static let delaySecondNanos: UInt64 = 2_000_000_000
 
-    static func asyncCounterReducer(state: AsyncCounterState, action: AsyncCounterAction) async -> AsyncCounterState {
-        switch action {
-            case .add:
-                try? await Task.sleep(nanoseconds: oneSecondNanos)
-                return .init(count: state.count + 1, isLoading: false)
-            case .subtract:
-                try? await Task.sleep(nanoseconds: oneSecondNanos)
-                return .init(count: state.count - 1, isLoading: false)
-            case .reset:
-                return .init()
-        }
+    static func acrv2(state: AsyncCounterState, action: AsyncCounterAction)
+        async -> (state: AsyncCounterState, action: AsyncCounterAction?) {
+            switch action {
+                case .add:
+                    return (AsyncCounterState(count: state.count, isLoading: true), AsyncCounterAction._add)
+                case ._add:
+                    try? await Task.sleep(nanoseconds: delaySecondNanos)
+                    return (AsyncCounterState(count: state.count + 1 , isLoading: false), nil)
+                case .subtract:
+                    return (.init(count: state.count, isLoading: true), AsyncCounterAction._subtract)
+                case ._subtract:
+                    try? await Task.sleep(nanoseconds: delaySecondNanos)
+                    return (AsyncCounterState(count: state.count - 1 , isLoading: false), nil)
+                case .reset:
+                    return (.init(), nil)
+            }
     }
 }
