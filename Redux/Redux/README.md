@@ -4,6 +4,20 @@ Flux architecture minimun implementation and showcase
 
 ## TODOs
 
+* Investigate some/any instead of erasing with Any(Middleware)
+* Testing
+* DependencyInjection strategies:
+  * ServiceLocator
+  * Injector
+  * ManualInjection
+* Candidates to demo:
+  * crypto explorer: Cosmos?
+    * tx, address, block
+  * crypto find something that is not implemented on mobile yet
+  * crypto usage of web3 libs
+
+## DONE
+
 * Transferring state multiple times for an action
 * Reducer emits only once
   * Store has this issue
@@ -25,15 +39,8 @@ Flux architecture minimun implementation and showcase
       * https://developer.apple.com/documentation/swift/withcheckedcontinuation(function:_:)
     * POSSIBLE ISSUE: thinl what would happen if I need to forward the state between loading and fetch. How to deal with that?
 * Middleware handle also posting new actions after reduce one of it
-* Handle Task cancellation? SwiftUI native? how to check it
-* Weird actions Names to hide them... is this the way?
-* Relation between Views and Task cancellation
-* Investigate some/any instead of erasing with Any(Middleware)
-* Testing
-* DependencyInjection strategies:
-  * ServiceLocator
-  * Injector
-  * ManualInjection
+* Handle Task cancellation? SwiftUI native cancels them when view disappears
+* Task cancellation before start a new task
 
 ## Bibliography
 
