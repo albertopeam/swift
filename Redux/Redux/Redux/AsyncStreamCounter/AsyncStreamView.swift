@@ -14,6 +14,9 @@ struct AsyncStreamView: View {
             LogMiddleware<AsyncStreamAction>()
             AsyncSteamAnalyticsMiddleware()
         })
+    @SwiftUI.State private var addTask: Task<Void, Never>?
+    @SwiftUI.State private var subtractTask: Task<Void, Never>?
+    @SwiftUI.State private var resetTask: Task<Void, Never>?
 
     var body: some View {
         VStack {
@@ -25,19 +28,22 @@ struct AsyncStreamView: View {
             }
             HStack {
                 Button("-") {
-                    Task {
+                    addTask?.cancel()
+                    addTask = Task {
                         await store.dispatch(action: .subtract)
                     }
                 }
                 .disabled(store.state.isLoading)
                 Button("+") {
-                    Task {
+                    subtractTask?.cancel()
+                    subtractTask = Task {
                         await store.dispatch(action: .add)
                     }
                 }
                 .disabled(store.state.isLoading)
                 Button("reset") {
-                    Task {
+                    resetTask?.cancel()
+                    resetTask = Task {
                         await store.dispatch(action: .reset)
                     }
                 }
