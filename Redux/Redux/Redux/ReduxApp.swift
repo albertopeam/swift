@@ -14,6 +14,7 @@ struct ReduxApp: App {
             CounterView()
             AsyncCounterView()
             AsyncStreamView()
+            AsyncSequenceCounterView()
         }
     }
 }

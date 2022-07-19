@@ -13,15 +13,51 @@ struct Stream<T>: AsyncSequence {
 
     private let iterator: StreamIterator<T>
 
+    init() {
+        self.iterator = StreamIterator()
+    }
+
+    init(item: @escaping Next) {
+        self.iterator = StreamIterator(item: item)
+    }
+
     init(items: [Next]) {
         self.iterator = StreamIterator(items: items)
     }
 
-    init(item: @escaping Next) {
-        self.iterator = StreamIterator(items: [item])
-    }
-
     func makeAsyncIterator() -> StreamIterator<T> {
         return iterator
+    }
+}
+
+extension Stream {
+    struct StreamIterator<T>: AsyncIteratorProtocol {
+        typealias Element = T
+
+        private var items: [Stream<T>.Next]
+
+        init() {
+            self.items = []
+        }
+
+        init(item: @escaping Stream<T>.Next) {
+            self.items = [item]
+        }
+
+        init(items: [Stream<T>.Next]) {
+            self.items = items
+        }
+
+        mutating func next() async -> Element? {
+            guard !Task.isCancelled else {
+                return nil
+            }
+            if items.isEmpty {
+                return nil
+            }
+            let item = items.removeFirst()
+            let result = await item()
+            return result
+        }
     }
 }

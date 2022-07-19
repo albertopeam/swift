@@ -4,8 +4,10 @@ Flux architecture minimun implementation and showcase
 
 ## TODOs
 
-* Investigate some/any instead of erasing with Any(Middleware)
 * Testing
+  * Migrate AsyncStreamStore or create new example with StoreV4
+* POST PRE middleware?
+* Investigate some/any instead of erasing with Any(Middleware)
 * DependencyInjection strategies:
   * ServiceLocator
   * Injector
@@ -38,6 +40,10 @@ Flux architecture minimun implementation and showcase
       * [CheckedContinuation](https://developer.apple.com/documentation/swift/checkedcontinuation)
       * https://developer.apple.com/documentation/swift/withcheckedcontinuation(function:_:)
     * POSSIBLE ISSUE: thinl what would happen if I need to forward the state between loading and fetch. How to deal with that?
+    * ISSUE: not possible to mock streams during tests
+  * StoreV4:
+    * Fixes tests mocking stream
+    * Fixes strong type to Stream, now uses AsyncSequence
 * Middleware handle also posting new actions after reduce one of it
 * Handle Task cancellation? SwiftUI native cancels them when view disappears
 * Task cancellation before start a new task

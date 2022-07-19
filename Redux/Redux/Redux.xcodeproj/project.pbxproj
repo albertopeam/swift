@@ -14,6 +14,13 @@
 		D31529F9287B5F8500E85D56 /* CounterReducerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D31529F8287B5F8500E85D56 /* CounterReducerTests.swift */; };
 		D3152A03287B5F8500E85D56 /* ReduxUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3152A02287B5F8500E85D56 /* ReduxUITests.swift */; };
 		D3152A05287B5F8500E85D56 /* ReduxUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3152A04287B5F8500E85D56 /* ReduxUITestsLaunchTests.swift */; };
+		D324C4302885AF6300D2AC36 /* TestAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = D324C42F2885AF6300D2AC36 /* TestAction.swift */; };
+		D324C4332885AFE500D2AC36 /* SpyMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = D324C4322885AFE500D2AC36 /* SpyMiddleware.swift */; };
+		D324C4352885B04400D2AC36 /* TestState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D324C4342885B04400D2AC36 /* TestState.swift */; };
+		D324C4382885EC4C00D2AC36 /* EmptyStream.swift in Sources */ = {isa = PBXBuildFile; fileRef = D324C4372885EC4C00D2AC36 /* EmptyStream.swift */; };
+		D324C43A2885EE1C00D2AC36 /* StoreV4.swift in Sources */ = {isa = PBXBuildFile; fileRef = D324C4392885EE1C00D2AC36 /* StoreV4.swift */; };
+		D324C43C2885F09900D2AC36 /* StoreV4Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D324C43B2885F09900D2AC36 /* StoreV4Tests.swift */; };
+		D324C43E2885F0D200D2AC36 /* MockReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D324C43D2885F0D200D2AC36 /* MockReducer.swift */; };
 		D324F06228806D3000BCEADB /* MiddlewareBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D324F06128806D3000BCEADB /* MiddlewareBuilder.swift */; };
 		D324F06428806D7B00BCEADB /* LogMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = D324F06328806D7B00BCEADB /* LogMiddleware.swift */; };
 		D324F0662880708F00BCEADB /* Store+AsyncSequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = D324F0652880708F00BCEADB /* Store+AsyncSequence.swift */; };
@@ -31,7 +38,6 @@
 		D3B65F2228842E1500814435 /* AsyncStreamStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B65F2128842E1500814435 /* AsyncStreamStore.swift */; };
 		D3B65F2428842F9400814435 /* AsyncSteamAnalyticsMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B65F2328842F9400814435 /* AsyncSteamAnalyticsMiddleware.swift */; };
 		D3B65F272884311700814435 /* Stream.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B65F262884311700814435 /* Stream.swift */; };
-		D3B65F292884315E00814435 /* StreamIterator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B65F282884315E00814435 /* StreamIterator.swift */; };
 		D3B65F2B2884342400814435 /* StoreV3.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B65F2A2884342400814435 /* StoreV3.swift */; };
 		D3B65F2D2884343A00814435 /* StoreV2.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B65F2C2884343A00814435 /* StoreV2.swift */; };
 		D3D6BAD2287EF0A900FCEC30 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D6BAD1287EF0A900FCEC30 /* Store.swift */; };
@@ -41,11 +47,21 @@
 		D3D6BADD287EF52C00FCEC30 /* Reducers.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D6BADC287EF52C00FCEC30 /* Reducers.swift */; };
 		D3D6BADF287EF9B800FCEC30 /* CounterStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D6BADE287EF9B800FCEC30 /* CounterStore.swift */; };
 		D3D6BAE1287F171200FCEC30 /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D6BAE0287F171200FCEC30 /* State.swift */; };
-		D3D6BAE6287F1A1E00FCEC30 /* StoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D6BAE5287F1A1E00FCEC30 /* StoreTests.swift */; };
 		D3D6BAE8287F218C00FCEC30 /* Middleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D6BAE7287F218C00FCEC30 /* Middleware.swift */; };
 		D3D6BAEA287F236300FCEC30 /* AnyMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D6BAE9287F236300FCEC30 /* AnyMiddleware.swift */; };
 		D3D6BAEC287F24CB00FCEC30 /* EchoMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D6BAEB287F24CB00FCEC30 /* EchoMiddleware.swift */; };
 		D3D6BAEE287F27BF00FCEC30 /* MiddlewarePipeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D6BAED287F27BF00FCEC30 /* MiddlewarePipeline.swift */; };
+		D3DEF6D92886D80F00DF8302 /* AsyncSequenceCounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3DEF6D82886D80F00DF8302 /* AsyncSequenceCounterView.swift */; };
+		D3DEF6DB2886D83700DF8302 /* AsyncSequenceStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3DEF6DA2886D83700DF8302 /* AsyncSequenceStore.swift */; };
+		D3DEF6DD2886D85100DF8302 /* AsyncSequenceState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3DEF6DC2886D85100DF8302 /* AsyncSequenceState.swift */; };
+		D3DEF6DF2886D85800DF8302 /* AsyncSequenceAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3DEF6DE2886D85800DF8302 /* AsyncSequenceAction.swift */; };
+		D3DEF6E12886D8E600DF8302 /* AsyncSequenceReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3DEF6E02886D8E600DF8302 /* AsyncSequenceReducer.swift */; };
+		D3DEF6E52886D9D300DF8302 /* AsyncSequenceReducerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3DEF6E42886D9D300DF8302 /* AsyncSequenceReducerTests.swift */; };
+		D3DEF6E72886EC9800DF8302 /* Stream+Values.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3DEF6E62886EC9800DF8302 /* Stream+Values.swift */; };
+		D3DEF6E92886ED1300DF8302 /* AsyncSequenceStateBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3DEF6E82886ED1300DF8302 /* AsyncSequenceStateBuilder.swift */; };
+		D3DEF6EB28870F0300DF8302 /* SingleStream.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3DEF6EA28870F0300DF8302 /* SingleStream.swift */; };
+		D3DEF6ED2887106100DF8302 /* TestStateBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3DEF6EC2887106100DF8302 /* TestStateBuilder.swift */; };
+		D3DEF6EF288757A100DF8302 /* StreamTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3DEF6EE288757A100DF8302 /* StreamTests.swift */; };
 		D3F6E22B2881BDDD005834AB /* Button+Enabled.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F6E22A2881BDDD005834AB /* Button+Enabled.swift */; };
 		D3F6E22F2882E3A6005834AB /* AsyncStreamReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F6E22E2882E3A6005834AB /* AsyncStreamReducer.swift */; };
 		D3F6E2312883325A005834AB /* AsyncStreamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F6E2302883325A005834AB /* AsyncStreamView.swift */; };
@@ -79,6 +95,13 @@
 		D31529FE287B5F8500E85D56 /* ReduxUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReduxUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3152A02287B5F8500E85D56 /* ReduxUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReduxUITests.swift; sourceTree = "<group>"; };
 		D3152A04287B5F8500E85D56 /* ReduxUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReduxUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		D324C42F2885AF6300D2AC36 /* TestAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestAction.swift; sourceTree = "<group>"; };
+		D324C4322885AFE500D2AC36 /* SpyMiddleware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpyMiddleware.swift; sourceTree = "<group>"; };
+		D324C4342885B04400D2AC36 /* TestState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestState.swift; sourceTree = "<group>"; };
+		D324C4372885EC4C00D2AC36 /* EmptyStream.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyStream.swift; sourceTree = "<group>"; };
+		D324C4392885EE1C00D2AC36 /* StoreV4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreV4.swift; sourceTree = "<group>"; };
+		D324C43B2885F09900D2AC36 /* StoreV4Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreV4Tests.swift; sourceTree = "<group>"; };
+		D324C43D2885F0D200D2AC36 /* MockReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockReducer.swift; sourceTree = "<group>"; };
 		D324F06128806D3000BCEADB /* MiddlewareBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiddlewareBuilder.swift; sourceTree = "<group>"; };
 		D324F06328806D7B00BCEADB /* LogMiddleware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogMiddleware.swift; sourceTree = "<group>"; };
 		D324F0652880708F00BCEADB /* Store+AsyncSequence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Store+AsyncSequence.swift"; sourceTree = "<group>"; };
@@ -96,7 +119,6 @@
 		D3B65F2128842E1500814435 /* AsyncStreamStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncStreamStore.swift; sourceTree = "<group>"; };
 		D3B65F2328842F9400814435 /* AsyncSteamAnalyticsMiddleware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncSteamAnalyticsMiddleware.swift; sourceTree = "<group>"; };
 		D3B65F262884311700814435 /* Stream.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stream.swift; sourceTree = "<group>"; };
-		D3B65F282884315E00814435 /* StreamIterator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamIterator.swift; sourceTree = "<group>"; };
 		D3B65F2A2884342400814435 /* StoreV3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreV3.swift; sourceTree = "<group>"; };
 		D3B65F2C2884343A00814435 /* StoreV2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreV2.swift; sourceTree = "<group>"; };
 		D3D6BAD1287EF0A900FCEC30 /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
@@ -106,11 +128,21 @@
 		D3D6BADC287EF52C00FCEC30 /* Reducers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reducers.swift; sourceTree = "<group>"; };
 		D3D6BADE287EF9B800FCEC30 /* CounterStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterStore.swift; sourceTree = "<group>"; };
 		D3D6BAE0287F171200FCEC30 /* State.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = State.swift; sourceTree = "<group>"; };
-		D3D6BAE5287F1A1E00FCEC30 /* StoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreTests.swift; sourceTree = "<group>"; };
 		D3D6BAE7287F218C00FCEC30 /* Middleware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Middleware.swift; sourceTree = "<group>"; };
 		D3D6BAE9287F236300FCEC30 /* AnyMiddleware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyMiddleware.swift; sourceTree = "<group>"; };
 		D3D6BAEB287F24CB00FCEC30 /* EchoMiddleware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EchoMiddleware.swift; sourceTree = "<group>"; };
 		D3D6BAED287F27BF00FCEC30 /* MiddlewarePipeline.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiddlewarePipeline.swift; sourceTree = "<group>"; };
+		D3DEF6D82886D80F00DF8302 /* AsyncSequenceCounterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncSequenceCounterView.swift; sourceTree = "<group>"; };
+		D3DEF6DA2886D83700DF8302 /* AsyncSequenceStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncSequenceStore.swift; sourceTree = "<group>"; };
+		D3DEF6DC2886D85100DF8302 /* AsyncSequenceState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncSequenceState.swift; sourceTree = "<group>"; };
+		D3DEF6DE2886D85800DF8302 /* AsyncSequenceAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncSequenceAction.swift; sourceTree = "<group>"; };
+		D3DEF6E02886D8E600DF8302 /* AsyncSequenceReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncSequenceReducer.swift; sourceTree = "<group>"; };
+		D3DEF6E42886D9D300DF8302 /* AsyncSequenceReducerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncSequenceReducerTests.swift; sourceTree = "<group>"; };
+		D3DEF6E62886EC9800DF8302 /* Stream+Values.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Stream+Values.swift"; sourceTree = "<group>"; };
+		D3DEF6E82886ED1300DF8302 /* AsyncSequenceStateBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncSequenceStateBuilder.swift; sourceTree = "<group>"; };
+		D3DEF6EA28870F0300DF8302 /* SingleStream.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleStream.swift; sourceTree = "<group>"; };
+		D3DEF6EC2887106100DF8302 /* TestStateBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestStateBuilder.swift; sourceTree = "<group>"; };
+		D3DEF6EE288757A100DF8302 /* StreamTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamTests.swift; sourceTree = "<group>"; };
 		D3F6E22A2881BDDD005834AB /* Button+Enabled.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Button+Enabled.swift"; sourceTree = "<group>"; };
 		D3F6E22E2882E3A6005834AB /* AsyncStreamReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncStreamReducer.swift; sourceTree = "<group>"; };
 		D3F6E2302883325A005834AB /* AsyncStreamView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncStreamView.swift; sourceTree = "<group>"; };
@@ -164,6 +196,7 @@
 		D31529E6287B5F8300E85D56 /* Redux */ = {
 			isa = PBXGroup;
 			children = (
+				D3DEF6D62886D7D000DF8302 /* AsyncSequenceCounter */,
 				D3B65F1B28842D8F00814435 /* AsyncStreamCounter */,
 				D3F6E22C2881BDEA005834AB /* SwiftUIExtensions */,
 				D324F06B2880724700BCEADB /* AsyncCounter */,
@@ -188,6 +221,7 @@
 		D31529F7287B5F8500E85D56 /* ReduxTests */ = {
 			isa = PBXGroup;
 			children = (
+				D3DEF6E22886D9C000DF8302 /* AsyncSequenceCounter */,
 				D3D6BAE4287F1A0E00FCEC30 /* Lib */,
 				D3D6BAE2287F19D700FCEC30 /* Counter */,
 			);
@@ -201,6 +235,23 @@
 				D3152A04287B5F8500E85D56 /* ReduxUITestsLaunchTests.swift */,
 			);
 			path = ReduxUITests;
+			sourceTree = "<group>";
+		};
+		D324C4312885AFDB00D2AC36 /* Middleware */ = {
+			isa = PBXGroup;
+			children = (
+				D324C4322885AFE500D2AC36 /* SpyMiddleware.swift */,
+			);
+			path = Middleware;
+			sourceTree = "<group>";
+		};
+		D324C4362885B23400D2AC36 /* Stream */ = {
+			isa = PBXGroup;
+			children = (
+				D3DEF6E62886EC9800DF8302 /* Stream+Values.swift */,
+				D3DEF6EE288757A100DF8302 /* StreamTests.swift */,
+			);
+			path = Stream;
 			sourceTree = "<group>";
 		};
 		D324F06B2880724700BCEADB /* AsyncCounter */ = {
@@ -248,8 +299,9 @@
 		D3B65F252884310D00814435 /* Stream */ = {
 			isa = PBXGroup;
 			children = (
+				D324C4372885EC4C00D2AC36 /* EmptyStream.swift */,
+				D3DEF6EA28870F0300DF8302 /* SingleStream.swift */,
 				D3B65F262884311700814435 /* Stream.swift */,
-				D3B65F282884315E00814435 /* StreamIterator.swift */,
 			);
 			path = Stream;
 			sourceTree = "<group>";
@@ -276,6 +328,7 @@
 				D3D6BAD1287EF0A900FCEC30 /* Store.swift */,
 				D3B65F2C2884343A00814435 /* StoreV2.swift */,
 				D3B65F2A2884342400814435 /* StoreV3.swift */,
+				D324C4392885EE1C00D2AC36 /* StoreV4.swift */,
 				D324F0652880708F00BCEADB /* Store+AsyncSequence.swift */,
 				D324F067288070C100BCEADB /* Store+Future.swift */,
 				D324F069288070DE00BCEADB /* Store+Publisher.swift */,
@@ -322,9 +375,52 @@
 		D3D6BAE4287F1A0E00FCEC30 /* Lib */ = {
 			isa = PBXGroup;
 			children = (
-				D3D6BAE5287F1A1E00FCEC30 /* StoreTests.swift */,
+				D324C4312885AFDB00D2AC36 /* Middleware */,
+				D324C43D2885F0D200D2AC36 /* MockReducer.swift */,
+				D324C43B2885F09900D2AC36 /* StoreV4Tests.swift */,
+				D324C4362885B23400D2AC36 /* Stream */,
+				D324C42F2885AF6300D2AC36 /* TestAction.swift */,
+				D324C4342885B04400D2AC36 /* TestState.swift */,
+				D3DEF6EC2887106100DF8302 /* TestStateBuilder.swift */,
 			);
 			path = Lib;
+			sourceTree = "<group>";
+		};
+		D3DEF6D62886D7D000DF8302 /* AsyncSequenceCounter */ = {
+			isa = PBXGroup;
+			children = (
+				D3DEF6D72886D7F900DF8302 /* Model */,
+				D3DEF6D82886D80F00DF8302 /* AsyncSequenceCounterView.swift */,
+			);
+			path = AsyncSequenceCounter;
+			sourceTree = "<group>";
+		};
+		D3DEF6D72886D7F900DF8302 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D3DEF6DA2886D83700DF8302 /* AsyncSequenceStore.swift */,
+				D3DEF6DC2886D85100DF8302 /* AsyncSequenceState.swift */,
+				D3DEF6DE2886D85800DF8302 /* AsyncSequenceAction.swift */,
+				D3DEF6E02886D8E600DF8302 /* AsyncSequenceReducer.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D3DEF6E22886D9C000DF8302 /* AsyncSequenceCounter */ = {
+			isa = PBXGroup;
+			children = (
+				D3DEF6E32886D9C500DF8302 /* Model */,
+			);
+			path = AsyncSequenceCounter;
+			sourceTree = "<group>";
+		};
+		D3DEF6E32886D9C500DF8302 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D3DEF6E42886D9D300DF8302 /* AsyncSequenceReducerTests.swift */,
+				D3DEF6E82886ED1300DF8302 /* AsyncSequenceStateBuilder.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		D3F6E22C2881BDEA005834AB /* SwiftUIExtensions */ = {
@@ -472,9 +568,14 @@
 				D3D6BAD2287EF0A900FCEC30 /* Store.swift in Sources */,
 				D3D6BADB287EF47C00FCEC30 /* CounterReducer.swift in Sources */,
 				D3D6BADF287EF9B800FCEC30 /* CounterStore.swift in Sources */,
+				D324C4382885EC4C00D2AC36 /* EmptyStream.swift in Sources */,
+				D3DEF6E12886D8E600DF8302 /* AsyncSequenceReducer.swift in Sources */,
+				D324C43A2885EE1C00D2AC36 /* StoreV4.swift in Sources */,
+				D3DEF6DD2886D85100DF8302 /* AsyncSequenceState.swift in Sources */,
 				D324F0742880B34300BCEADB /* AsyncCounterAction.swift in Sources */,
 				D324F0702880B27500BCEADB /* AsyncCounterState.swift in Sources */,
 				D3B65F2028842DF800814435 /* AsyncStreamState.swift in Sources */,
+				D3DEF6D92886D80F00DF8302 /* AsyncSequenceCounterView.swift in Sources */,
 				D3B65F2D2884343A00814435 /* StoreV2.swift in Sources */,
 				D3F6E22B2881BDDD005834AB /* Button+Enabled.swift in Sources */,
 				D324F0662880708F00BCEADB /* Store+AsyncSequence.swift in Sources */,
@@ -484,10 +585,11 @@
 				D3B65F2B2884342400814435 /* StoreV3.swift in Sources */,
 				D3B65F1E28842DD300814435 /* AsyncStreamAction.swift in Sources */,
 				D324F0762880B3A900BCEADB /* AsyncCounterReducer.swift in Sources */,
+				D3DEF6EB28870F0300DF8302 /* SingleStream.swift in Sources */,
 				D3D6BAD6287EF41600FCEC30 /* CounterState.swift in Sources */,
+				D3DEF6DF2886D85800DF8302 /* AsyncSequenceAction.swift in Sources */,
 				D3D6BAE8287F218C00FCEC30 /* Middleware.swift in Sources */,
 				D324F0722880B2B000BCEADB /* AsyncCounterStore.swift in Sources */,
-				D3B65F292884315E00814435 /* StreamIterator.swift in Sources */,
 				D3D6BAE1287F171200FCEC30 /* State.swift in Sources */,
 				D324F07B28813EAE00BCEADB /* ProgressView+Visibility.swift in Sources */,
 				D3F6E2312883325A005834AB /* AsyncStreamView.swift in Sources */,
@@ -498,6 +600,7 @@
 				D324F0792880B59900BCEADB /* AnalyticsMiddleware.swift in Sources */,
 				D3D6BAEA287F236300FCEC30 /* AnyMiddleware.swift in Sources */,
 				D3D6BAD9287EF46A00FCEC30 /* CounterAction.swift in Sources */,
+				D3DEF6DB2886D83700DF8302 /* AsyncSequenceStore.swift in Sources */,
 				D3B65F2228842E1500814435 /* AsyncStreamStore.swift in Sources */,
 				D3D6BAEE287F27BF00FCEC30 /* MiddlewarePipeline.swift in Sources */,
 				D3D6BADD287EF52C00FCEC30 /* Reducers.swift in Sources */,
@@ -509,8 +612,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D324C4332885AFE500D2AC36 /* SpyMiddleware.swift in Sources */,
 				D31529F9287B5F8500E85D56 /* CounterReducerTests.swift in Sources */,
-				D3D6BAE6287F1A1E00FCEC30 /* StoreTests.swift in Sources */,
+				D3DEF6ED2887106100DF8302 /* TestStateBuilder.swift in Sources */,
+				D3DEF6E72886EC9800DF8302 /* Stream+Values.swift in Sources */,
+				D324C4302885AF6300D2AC36 /* TestAction.swift in Sources */,
+				D3DEF6EF288757A100DF8302 /* StreamTests.swift in Sources */,
+				D324C4352885B04400D2AC36 /* TestState.swift in Sources */,
+				D324C43E2885F0D200D2AC36 /* MockReducer.swift in Sources */,
+				D3DEF6E92886ED1300DF8302 /* AsyncSequenceStateBuilder.swift in Sources */,
+				D3DEF6E52886D9D300DF8302 /* AsyncSequenceReducerTests.swift in Sources */,
+				D324C43C2885F09900D2AC36 /* StoreV4Tests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -715,6 +827,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -735,6 +848,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
