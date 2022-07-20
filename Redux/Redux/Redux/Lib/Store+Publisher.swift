@@ -8,7 +8,7 @@
 import Foundation
 import Combine
 
-extension Store {
+extension StoreV1 {
     func dispatch<P: Publisher>(publisher: P) where P.Output == Action, P.Failure == Never {
         var subscription: AnyCancellable?
         subscription = publisher.sink { _ in

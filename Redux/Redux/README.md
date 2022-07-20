@@ -4,8 +4,6 @@ Flux architecture minimun implementation and showcase
 
 ## TODOs
 
-* Testing
-  * Migrate AsyncStreamStore or create new example with StoreV4
 * POST PRE middleware?
   * Middleware pipeline returns if no action applied
   * Does it make sense to mutate the action? or only act when dispatched

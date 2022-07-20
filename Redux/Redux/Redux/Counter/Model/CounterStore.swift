@@ -7,4 +7,4 @@
 
 import Foundation
 
-typealias CounterStore = Store<CounterState, CounterAction>
+typealias CounterStore = StoreV1<CounterState, CounterAction>

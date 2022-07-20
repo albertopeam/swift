@@ -2,14 +2,17 @@
 //  Store.swift
 //  Redux
 //
-//  Created by Alberto Penas Amor on 13/7/22.
+//  Created by Alberto Penas Amor on 18/7/22.
 //
 
 import Foundation
-import _Concurrency
 
-actor Store<S: State, Action>: ObservableObject {
-    typealias Reducer = (S, Action) async -> S
+import Foundation
+
+actor Store<S: State, Action, R: AsyncSequence>: ObservableObject where R.Element == S {
+    typealias Input = (state: S, action: Action)
+    typealias Output = R
+    typealias Reducer = (Input) -> Output
 
     @MainActor @Published private(set) var state: S = .init()
     private let middleware: AnyMiddleware<Action>
@@ -27,15 +30,22 @@ actor Store<S: State, Action>: ObservableObject {
     }
 
     func dispatch(action: Action) async {
-        guard let newAction = await middleware(action: action) else {
-            return
-        }
+        do {
+            guard let newAction = await middleware(action: action) else {
+                return
+            }
 
-        await dispatchOnMain(action: newAction)
+            let stream = await reducer((state, newAction))
+            for try await newState in stream {
+                print(newState)
+                await postState(newState)
+            }
+        } catch {
+            print("Store has thrown: \(error)")
+        }
     }
 
-    @MainActor private func dispatchOnMain(action: Action) async {
-        let newState = await reducer(state, action)
+    @MainActor private func postState(_ newState: S) async {
         state = newState
     }
 }

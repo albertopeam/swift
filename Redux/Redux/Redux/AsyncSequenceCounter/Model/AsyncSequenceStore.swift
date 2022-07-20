@@ -7,4 +7,4 @@
 
 import Foundation
 
-typealias AsyncSequenceStore = StoreV4<AsyncSequenceState, AsyncSequenceAction, Stream<AsyncSequenceState>>
+typealias AsyncSequenceStore = Store<AsyncSequenceState, AsyncSequenceAction, Stream<AsyncSequenceState>>

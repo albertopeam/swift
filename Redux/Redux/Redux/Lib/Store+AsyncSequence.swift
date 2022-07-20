@@ -7,7 +7,7 @@
 
 import Foundation
 
-extension Store {
+extension StoreV1 {
     func dispatch<Seq: AsyncSequence>(sequence: Seq) async throws where Seq.Element == Action {
         for try await action in sequence {
             await dispatch(action: action)

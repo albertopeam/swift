@@ -8,7 +8,7 @@
 import Foundation
 import Combine
 
-extension Store {
+extension StoreV1 {
     func dispatch(future: Future<Action?, Never>) {
         var subscription: AnyCancellable?
         subscription = future.sink { _ in
