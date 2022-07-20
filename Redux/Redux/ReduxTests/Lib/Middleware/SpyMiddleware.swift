@@ -10,9 +10,10 @@ import Foundation
 
 final class SpyMiddleware: Middleware {
     var capturedAction: TestAction?
+    var returnAction: TestAction?
 
     func callAsFunction(action: TestAction) async -> TestAction? {
         capturedAction = action
-        return nil
+        return returnAction
     }
 }

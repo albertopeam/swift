@@ -7,10 +7,13 @@ Flux architecture minimun implementation and showcase
 * Testing
   * Migrate AsyncStreamStore or create new example with StoreV4
 * POST PRE middleware?
+  * Middleware pipeline returns if no action applied
   * Does it make sense to mutate the action? or only act when dispatched
   * PRE/POST is kind of cool to trace events
 * SubStates, needed?
 * Investigate some/any instead of erasing with Any(Middleware)
+* Task cancellation in swiftUI is needed?
+  * Minute 18 aprox https://developer.apple.com/videos/play/wwdc2021/10019/
 * DependencyInjection strategies:
   * ServiceLocator
   * Injector
