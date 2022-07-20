@@ -7,11 +7,13 @@ Flux architecture minimun implementation and showcase
 * Testing
   * Migrate AsyncStreamStore or create new example with StoreV4
 * POST PRE middleware?
+* SubStates, needed?
 * Investigate some/any instead of erasing with Any(Middleware)
 * DependencyInjection strategies:
   * ServiceLocator
   * Injector
   * ManualInjection
+* UITests
 * Candidates to demo:
   * crypto explorer: Cosmos?
     * tx, address, block
