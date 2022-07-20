@@ -10,6 +10,9 @@ import Combine
 @testable import Redux
 
 final class StoreV4Tests: XCTestCase {
+
+    // MARK: - action
+
     func testGivenInitialStateWhenDispatchActionButReducerHasAnEmptyStreamThenStateHasntChanged() async throws {
         let sut = StoreV4<TestState, TestAction, EmptyStream>(reducer: { _ in return EmptyStream<TestState>() })
 
@@ -30,5 +33,18 @@ final class StoreV4Tests: XCTestCase {
         let result = await sut.state
 
         XCTAssertEqual(result, nextState)
+    }
+
+    //MARK: - middleware
+
+    func testGivenSomeStateWhenDispatchActionThenInvokeMiddlewareWithThatAction() async throws {
+        let spy = SpyMiddleware()
+        let action: TestAction = .run
+        let sut = StoreV4<TestState, TestAction, EmptyStream>(reducer: { _ in return EmptyStream<TestState>() },
+                                                              middleware: { spy })
+
+        await sut.dispatch(action: action)
+
+        XCTAssertEqual(spy.capturedAction, action)
     }
 }

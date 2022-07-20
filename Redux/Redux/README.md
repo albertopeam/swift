@@ -7,6 +7,8 @@ Flux architecture minimun implementation and showcase
 * Testing
   * Migrate AsyncStreamStore or create new example with StoreV4
 * POST PRE middleware?
+  * Does it make sense to mutate the action? or only act when dispatched
+  * PRE/POST is kind of cool to trace events
 * SubStates, needed?
 * Investigate some/any instead of erasing with Any(Middleware)
 * DependencyInjection strategies:
