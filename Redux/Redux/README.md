@@ -4,30 +4,34 @@ Flux architecture minimun implementation and showcase
 
 ## TODOs
 
-* POST PRE middleware?
-  * Logger builder to easily mount before/after middleware with logging
-  * Middleware pipeline returns if no action applied
-  * Does it make sense to mutate the action? or only act when dispatched
-  * PRE/POST is kind of cool to trace events
-* Store
-  * remove print with try? why it happens?
 * SubStates, needed?
+  * ideas: 
+    * https://github.com/ReSwift/ReSwift#create-a-subscription-of-several-substates-combined
 * Investigate some/any instead of erasing with Any(Middleware)
-* Task cancellation in swiftUI is needed?
-  * Minute 18 aprox https://developer.apple.com/videos/play/wwdc2021/10019/
 * DependencyInjection strategies:
   * ServiceLocator
   * Injector
   * ManualInjection
-* UITests
+* Create Package and move code
 * Candidates to demo:
   * crypto explorer: Cosmos?
     * tx, address, block
   * crypto find something that is not implemented on mobile yet
   * crypto usage of web3 libs
+* UITests?
+  * maybe in demo
 
 ## DONE
 
+* Task cancellation in swiftUI is needed?
+  * Minute 18 aprox https://developer.apple.com/videos/play/wwdc2021/10019/
+* Store
+  * remove print with try? why it happens?. Couldn't remove it as it is needed
+* POST PRE middleware?
+  * Logger builder to easily mount before/after middleware with logging
+  * Middleware pipeline returns if no action applied
+  * Does it make sense to mutate the action? or only act when dispatched
+  * PRE/POST is kind of cool to trace events
 * Transferring state multiple times for an action
 * Reducer emits only once
   * Store has this issue

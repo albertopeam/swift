@@ -49,18 +49,18 @@ actor Store<S: State, Action, R: AsyncSequence>: ObservableObject where R.Elemen
 
 
     func dispatch(action: Action) async {
-        do {
-            await beforeMiddleware?(action: action)
+        await beforeMiddleware?(action: action)
 
-            let stream = await reducer((state, action))
+        let stream = await reducer((state, action))
+        do {
             for try await newState in stream {
                 await postState(newState)
             }
-
-            await afterMiddleware?(action: action)
         } catch {
-            print("Store has thrown: \(error)")
+            print(error)
         }
+
+        await afterMiddleware?(action: action)
     }
 
     @MainActor private func postState(_ newState: S) async {
