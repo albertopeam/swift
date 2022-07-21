@@ -8,13 +8,13 @@
 import Foundation
 
 struct AnyMiddleware<Action>: Middleware {
-    private let wrappedMiddleware: (Action) async -> Action?
+    private let wrappedMiddleware: (Action) async -> Void
 
     init<M: Middleware>(_ middleware: M) where M.Action == Action {
         self.wrappedMiddleware = middleware.callAsFunction(action:)
     }
 
-    func callAsFunction(action: Action) async -> Action? {
+    func callAsFunction(action: Action) async {
         return await wrappedMiddleware(action)
     }
 }

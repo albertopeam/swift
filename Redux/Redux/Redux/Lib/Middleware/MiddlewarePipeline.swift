@@ -22,16 +22,9 @@ struct MiddlewarePipeline<Action>: Middleware {
         self.middleware = middleware
     }
 
-    func callAsFunction(action: Action) async -> Action? {
-        var currentAction: Action = action
+    func callAsFunction(action: Action) async {
         for m in middleware {
-            guard let newAction = await m(action: currentAction) else {
-                return nil
-            }
-
-            currentAction = newAction
+            await m(action: action)
         }
-
-        return currentAction
     }
 }

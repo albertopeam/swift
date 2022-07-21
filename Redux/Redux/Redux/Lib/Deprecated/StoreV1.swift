@@ -24,15 +24,12 @@ actor StoreV1<S: State, Action>: ObservableObject {
 
     convenience init(reducer: @escaping Reducer) {
         self.init(reducer: reducer,
-                  middleware: { EchoMiddleware<Action>() })
+                  middleware: { LogMiddleware<Action>(context: String(describing: Self.self)) })
     }
 
     func dispatch(action: Action) async {
-        guard let newAction = await middleware(action: action) else {
-            return
-        }
-
-        await dispatchOnMain(action: newAction)
+        await middleware(action: action)
+        await dispatchOnMain(action: action)
     }
 
     @MainActor private func dispatchOnMain(action: Action) async {

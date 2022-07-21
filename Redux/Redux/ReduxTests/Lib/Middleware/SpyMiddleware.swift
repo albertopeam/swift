@@ -8,12 +8,10 @@
 import Foundation
 @testable import Redux
 
-final class SpyMiddleware: Middleware {
-    var capturedAction: TestAction?
-    var returnAction: TestAction?
+final class SpyMiddleware<T>: Middleware {
+    var capturedAction: T?
 
-    func callAsFunction(action: TestAction) async -> TestAction? {
+    func callAsFunction(action: T) async  {
         capturedAction = action
-        return returnAction
     }
 }

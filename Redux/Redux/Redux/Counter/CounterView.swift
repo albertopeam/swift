@@ -10,7 +10,7 @@ import _Concurrency
 
 struct CounterView: View {
     @StateObject private var store: CounterStore = .init(reducer: Reducers.counterReducer,
-                                                          middleware: { LogMiddleware() })
+                                                         middleware: { LogMiddleware(context: String(describing: Self.self)) })
 
     var body: some View {
         VStack {

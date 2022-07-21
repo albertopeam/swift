@@ -8,8 +8,19 @@
 import Foundation
 
 struct LogMiddleware<Action>: Middleware {
-    func callAsFunction(action: Action) async -> Action? {
-        print("Log \(action)")
-        return action
+    private let context: String
+    private let logger: Logger
+
+    init(context: String, logger: Logger) {
+        self.context = context
+        self.logger = logger
+    }
+
+    init(context: String) {
+        self.init(context: context, logger: StandartOutputLogger())
+    }
+
+    func callAsFunction(action: Action) async {
+        logger.print("\(context)-\(action)")
     }
 }

@@ -25,18 +25,16 @@ actor StoreV2<S: State, Action>: ObservableObject {
 
     convenience init(reducer: @escaping Reducer) {
         self.init(reducer: reducer,
-                  middleware: { EchoMiddleware<Action>() })
+                  middleware: { LogMiddleware<Action>(context: String(describing: Self.self)) })
     }
 
     func dispatch(action: Action) async {
         var output: (S, Action?)
         var currentAction: Action = action
         repeat {
-            guard let newAction = await middleware(action: currentAction) else {
-                return
-            }
+            await middleware(action: currentAction)
             let currentState = await state
-            output = await reducer((currentState, newAction))
+            output = await reducer((currentState, currentAction))
             await postState(output.0)
             if let action = output.1 {
                 currentAction = action

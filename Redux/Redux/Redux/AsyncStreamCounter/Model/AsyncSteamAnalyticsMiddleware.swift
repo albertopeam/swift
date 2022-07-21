@@ -8,7 +8,7 @@
 import Foundation
 
 struct AsyncSteamAnalyticsMiddleware: Middleware {
-    func callAsFunction(action: AsyncStreamAction) async -> AsyncStreamAction? {
+    func callAsFunction(action: AsyncStreamAction) async {
         switch action {
         case .add:
             print("AsyncSteamAnalyticsMiddleware add")
@@ -17,6 +17,5 @@ struct AsyncSteamAnalyticsMiddleware: Middleware {
         case .reset:
             print("AsyncSteamAnalyticsMiddleware reset")
         }
-        return action
     }
 }

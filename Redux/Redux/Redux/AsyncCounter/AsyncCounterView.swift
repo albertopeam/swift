@@ -12,7 +12,7 @@ struct AsyncCounterView: View {
     @StateObject private var store: AsyncCounterStore =
         .init(reducer: Reducers.acrv2(state:action:),
               middleware: {
-            LogMiddleware<AsyncCounterAction>()
+            LogMiddleware<AsyncCounterAction>(context: String(describing: Self.self))
             AnalyticsMiddleware()
         })
 

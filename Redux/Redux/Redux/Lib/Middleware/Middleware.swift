@@ -9,7 +9,7 @@ import Foundation
 
 protocol Middleware {
     associatedtype Action
-    func callAsFunction(action: Action) async -> Action?
+    func callAsFunction(action: Action) async
 }
 
 extension Middleware {

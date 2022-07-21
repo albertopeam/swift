@@ -11,12 +11,8 @@ import SwiftUI
 struct AsyncSequenceCounterView: View {
     @StateObject private var store: AsyncSequenceStore =
         .init(reducer: AsyncSequenceReducer.reducer,
-              middleware: {
-            LogMiddleware<AsyncSequenceAction>()
-        })
-    @SwiftUI.State private var addTask: Task<Void, Never>?
-    @SwiftUI.State private var subtractTask: Task<Void, Never>?
-    @SwiftUI.State private var resetTask: Task<Void, Never>?
+              beforeMiddleware: { LogMiddleware(context: "Before") },
+              afterMiddleware: { LogMiddleware(context: "After") })
 
     var body: some View {
         VStack {
@@ -28,22 +24,19 @@ struct AsyncSequenceCounterView: View {
             }
             HStack {
                 Button("-") {
-                    addTask?.cancel()
-                    addTask = Task {
+                    Task {
                         await store.dispatch(action: .subtract)
                     }
                 }
                 .disabled(store.state.isLoading)
                 Button("+") {
-                    subtractTask?.cancel()
-                    subtractTask = Task {
+                    Task {
                         await store.dispatch(action: .add)
                     }
                 }
                 .disabled(store.state.isLoading)
                 Button("reset") {
-                    resetTask?.cancel()
-                    resetTask = Task {
+                    Task {
                         await store.dispatch(action: .reset)
                     }
                 }

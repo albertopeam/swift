@@ -37,14 +37,39 @@ final class StoreTests: XCTestCase {
 
     //MARK: - middleware
 
-    func testGivenSomeStateWhenDispatchActionThenInvokeMiddlewareWithThatAction() async throws {
-        let spy = SpyMiddleware()
+    func testGivenSomeStateWhenDispatchActionThenInvokeBeforeMiddlewareOnlyWithThatAction() async throws {
+        let spy = SpyMiddleware<TestAction>()
         let action: TestAction = .run
         let sut = Store<TestState, TestAction, EmptyStream>(reducer: { _ in return EmptyStream<TestState>() },
-                                                              middleware: { spy })
+                                                            beforeMiddleware: { spy })
 
         await sut.dispatch(action: action)
 
         XCTAssertEqual(spy.capturedAction, action)
+    }
+
+    func testGivenSomeStateWhenDispatchActionThenInvokeAfterMiddlewareOnlyWithThatAction() async throws {
+        let spy = SpyMiddleware<TestAction>()
+        let action: TestAction = .run
+        let sut = Store<TestState, TestAction, EmptyStream>(reducer: { _ in return EmptyStream<TestState>() },
+                                                            afterMiddleware: { spy })
+
+        await sut.dispatch(action: action)
+
+        XCTAssertEqual(spy.capturedAction, action)
+    }
+
+    func testGivenSomeStateWhenDispatchActionThenInvokeBeforeAndAfterMiddlewareOnlyWithThatAction() async throws {
+        let beforeSpy = SpyMiddleware<TestAction>()
+        let afterSpy = SpyMiddleware<TestAction>()
+        let action: TestAction = .run
+        let sut = Store<TestState, TestAction, EmptyStream>(reducer: { _ in return EmptyStream<TestState>() },
+                                                            beforeMiddleware: { beforeSpy },
+                                                            afterMiddleware: { afterSpy })
+
+        await sut.dispatch(action: action)
+
+        XCTAssertEqual(beforeSpy.capturedAction, action)
+        XCTAssertEqual(afterSpy.capturedAction, action)
     }
 }

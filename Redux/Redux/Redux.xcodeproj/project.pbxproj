@@ -33,8 +33,12 @@
 		D324F0762880B3A900BCEADB /* AsyncCounterReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D324F0752880B3A900BCEADB /* AsyncCounterReducer.swift */; };
 		D324F0792880B59900BCEADB /* AnalyticsMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = D324F0782880B59900BCEADB /* AnalyticsMiddleware.swift */; };
 		D324F07B28813EAE00BCEADB /* ProgressView+Visibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = D324F07A28813EAE00BCEADB /* ProgressView+Visibility.swift */; };
+		D34D461B2889863A00481FB2 /* EmptyMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = D34D461A2889863A00481FB2 /* EmptyMiddleware.swift */; };
+		D34D461D288989C200481FB2 /* LogMiddlewareTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D34D461C288989C200481FB2 /* LogMiddlewareTests.swift */; };
+		D34D462028898BA600481FB2 /* SpyLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = D34D461F28898BA600481FB2 /* SpyLogger.swift */; };
 		D35ABBBE28882C7B003FD7CF /* MiddlewarePipelineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35ABBBD28882C7B003FD7CF /* MiddlewarePipelineTests.swift */; };
-		D35ABBC028882C8A003FD7CF /* EchoMiddlewareTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35ABBBF28882C8A003FD7CF /* EchoMiddlewareTests.swift */; };
+		D35ABBC528884845003FD7CF /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35ABBC428884845003FD7CF /* Logger.swift */; };
+		D35ABBC728884856003FD7CF /* StandartOutputLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35ABBC628884856003FD7CF /* StandartOutputLogger.swift */; };
 		D3B65F1E28842DD300814435 /* AsyncStreamAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B65F1D28842DD300814435 /* AsyncStreamAction.swift */; };
 		D3B65F2028842DF800814435 /* AsyncStreamState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B65F1F28842DF800814435 /* AsyncStreamState.swift */; };
 		D3B65F2228842E1500814435 /* AsyncStreamStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B65F2128842E1500814435 /* AsyncStreamStore.swift */; };
@@ -51,7 +55,6 @@
 		D3D6BAE1287F171200FCEC30 /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D6BAE0287F171200FCEC30 /* State.swift */; };
 		D3D6BAE8287F218C00FCEC30 /* Middleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D6BAE7287F218C00FCEC30 /* Middleware.swift */; };
 		D3D6BAEA287F236300FCEC30 /* AnyMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D6BAE9287F236300FCEC30 /* AnyMiddleware.swift */; };
-		D3D6BAEC287F24CB00FCEC30 /* EchoMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D6BAEB287F24CB00FCEC30 /* EchoMiddleware.swift */; };
 		D3D6BAEE287F27BF00FCEC30 /* MiddlewarePipeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D6BAED287F27BF00FCEC30 /* MiddlewarePipeline.swift */; };
 		D3DEF6D92886D80F00DF8302 /* AsyncSequenceCounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3DEF6D82886D80F00DF8302 /* AsyncSequenceCounterView.swift */; };
 		D3DEF6DB2886D83700DF8302 /* AsyncSequenceStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3DEF6DA2886D83700DF8302 /* AsyncSequenceStore.swift */; };
@@ -116,8 +119,12 @@
 		D324F0752880B3A900BCEADB /* AsyncCounterReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncCounterReducer.swift; sourceTree = "<group>"; };
 		D324F0782880B59900BCEADB /* AnalyticsMiddleware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsMiddleware.swift; sourceTree = "<group>"; };
 		D324F07A28813EAE00BCEADB /* ProgressView+Visibility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProgressView+Visibility.swift"; sourceTree = "<group>"; };
+		D34D461A2889863A00481FB2 /* EmptyMiddleware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyMiddleware.swift; sourceTree = "<group>"; };
+		D34D461C288989C200481FB2 /* LogMiddlewareTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogMiddlewareTests.swift; sourceTree = "<group>"; };
+		D34D461F28898BA600481FB2 /* SpyLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpyLogger.swift; sourceTree = "<group>"; };
 		D35ABBBD28882C7B003FD7CF /* MiddlewarePipelineTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiddlewarePipelineTests.swift; sourceTree = "<group>"; };
-		D35ABBBF28882C8A003FD7CF /* EchoMiddlewareTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EchoMiddlewareTests.swift; sourceTree = "<group>"; };
+		D35ABBC428884845003FD7CF /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		D35ABBC628884856003FD7CF /* StandartOutputLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandartOutputLogger.swift; sourceTree = "<group>"; };
 		D3B65F1D28842DD300814435 /* AsyncStreamAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncStreamAction.swift; sourceTree = "<group>"; };
 		D3B65F1F28842DF800814435 /* AsyncStreamState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncStreamState.swift; sourceTree = "<group>"; };
 		D3B65F2128842E1500814435 /* AsyncStreamStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncStreamStore.swift; sourceTree = "<group>"; };
@@ -134,7 +141,6 @@
 		D3D6BAE0287F171200FCEC30 /* State.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = State.swift; sourceTree = "<group>"; };
 		D3D6BAE7287F218C00FCEC30 /* Middleware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Middleware.swift; sourceTree = "<group>"; };
 		D3D6BAE9287F236300FCEC30 /* AnyMiddleware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyMiddleware.swift; sourceTree = "<group>"; };
-		D3D6BAEB287F24CB00FCEC30 /* EchoMiddleware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EchoMiddleware.swift; sourceTree = "<group>"; };
 		D3D6BAED287F27BF00FCEC30 /* MiddlewarePipeline.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiddlewarePipeline.swift; sourceTree = "<group>"; };
 		D3DEF6D82886D80F00DF8302 /* AsyncSequenceCounterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncSequenceCounterView.swift; sourceTree = "<group>"; };
 		D3DEF6DA2886D83700DF8302 /* AsyncSequenceStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncSequenceStore.swift; sourceTree = "<group>"; };
@@ -200,6 +206,7 @@
 		D31529E6287B5F8300E85D56 /* Redux */ = {
 			isa = PBXGroup;
 			children = (
+				D3D6BADC287EF52C00FCEC30 /* Reducers.swift */,
 				D3DEF6D62886D7D000DF8302 /* AsyncSequenceCounter */,
 				D3B65F1B28842D8F00814435 /* AsyncStreamCounter */,
 				D3F6E22C2881BDEA005834AB /* SwiftUIExtensions */,
@@ -207,7 +214,6 @@
 				D3D6BAD4287EF40200FCEC30 /* Counter */,
 				D3D6BAD3287EF0AD00FCEC30 /* Lib */,
 				D31529E7287B5F8300E85D56 /* ReduxApp.swift */,
-				D3D6BADC287EF52C00FCEC30 /* Reducers.swift */,
 				D31529EB287B5F8500E85D56 /* Assets.xcassets */,
 				D31529ED287B5F8500E85D56 /* Preview Content */,
 			);
@@ -244,9 +250,9 @@
 		D324C4312885AFDB00D2AC36 /* Middleware */ = {
 			isa = PBXGroup;
 			children = (
-				D324C4322885AFE500D2AC36 /* SpyMiddleware.swift */,
+				D34D461C288989C200481FB2 /* LogMiddlewareTests.swift */,
 				D35ABBBD28882C7B003FD7CF /* MiddlewarePipelineTests.swift */,
-				D35ABBBF28882C8A003FD7CF /* EchoMiddlewareTests.swift */,
+				D324C4322885AFE500D2AC36 /* SpyMiddleware.swift */,
 			);
 			path = Middleware;
 			sourceTree = "<group>";
@@ -281,14 +287,43 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		D34D461E28898B9B00481FB2 /* Logger */ = {
+			isa = PBXGroup;
+			children = (
+				D34D461F28898BA600481FB2 /* SpyLogger.swift */,
+			);
+			path = Logger;
+			sourceTree = "<group>";
+		};
 		D35ABBC1288844B5003FD7CF /* Deprecated */ = {
 			isa = PBXGroup;
 			children = (
+				D324F0652880708F00BCEADB /* Store+AsyncSequence.swift */,
+				D324F067288070C100BCEADB /* Store+Future.swift */,
+				D324F069288070DE00BCEADB /* Store+Publisher.swift */,
 				D3D6BAD1287EF0A900FCEC30 /* StoreV1.swift */,
 				D3B65F2C2884343A00814435 /* StoreV2.swift */,
 				D3B65F2A2884342400814435 /* StoreV3.swift */,
 			);
 			path = Deprecated;
+			sourceTree = "<group>";
+		};
+		D35ABBC2288846CA003FD7CF /* Store */ = {
+			isa = PBXGroup;
+			children = (
+				D3D6BAE0287F171200FCEC30 /* State.swift */,
+				D324C4392885EE1C00D2AC36 /* Store.swift */,
+			);
+			path = Store;
+			sourceTree = "<group>";
+		};
+		D35ABBC328884824003FD7CF /* Logger */ = {
+			isa = PBXGroup;
+			children = (
+				D35ABBC428884845003FD7CF /* Logger.swift */,
+				D35ABBC628884856003FD7CF /* StandartOutputLogger.swift */,
+			);
+			path = Logger;
 			sourceTree = "<group>";
 		};
 		D3B65F1B28842D8F00814435 /* AsyncStreamCounter */ = {
@@ -326,11 +361,11 @@
 			isa = PBXGroup;
 			children = (
 				D3D6BAE9287F236300FCEC30 /* AnyMiddleware.swift */,
-				D3D6BAEB287F24CB00FCEC30 /* EchoMiddleware.swift */,
 				D324F06328806D7B00BCEADB /* LogMiddleware.swift */,
 				D3D6BAE7287F218C00FCEC30 /* Middleware.swift */,
 				D324F06128806D3000BCEADB /* MiddlewareBuilder.swift */,
 				D3D6BAED287F27BF00FCEC30 /* MiddlewarePipeline.swift */,
+				D34D461A2889863A00481FB2 /* EmptyMiddleware.swift */,
 			);
 			path = Middleware;
 			sourceTree = "<group>";
@@ -338,14 +373,11 @@
 		D3D6BAD3287EF0AD00FCEC30 /* Lib */ = {
 			isa = PBXGroup;
 			children = (
+				D35ABBC328884824003FD7CF /* Logger */,
 				D35ABBC1288844B5003FD7CF /* Deprecated */,
 				D3B65F2E2884345600814435 /* Middleware */,
+				D35ABBC2288846CA003FD7CF /* Store */,
 				D3B65F252884310D00814435 /* Stream */,
-				D3D6BAE0287F171200FCEC30 /* State.swift */,
-				D324C4392885EE1C00D2AC36 /* Store.swift */,
-				D324F0652880708F00BCEADB /* Store+AsyncSequence.swift */,
-				D324F067288070C100BCEADB /* Store+Future.swift */,
-				D324F069288070DE00BCEADB /* Store+Publisher.swift */,
 			);
 			path = Lib;
 			sourceTree = "<group>";
@@ -389,6 +421,7 @@
 		D3D6BAE4287F1A0E00FCEC30 /* Lib */ = {
 			isa = PBXGroup;
 			children = (
+				D34D461E28898B9B00481FB2 /* Logger */,
 				D324C4312885AFDB00D2AC36 /* Middleware */,
 				D324C43D2885F0D200D2AC36 /* MockReducer.swift */,
 				D324C43B2885F09900D2AC36 /* StoreTests.swift */,
@@ -579,10 +612,12 @@
 				D3F6E22F2882E3A6005834AB /* AsyncStreamReducer.swift in Sources */,
 				D324F06A288070DE00BCEADB /* Store+Publisher.swift in Sources */,
 				D324F068288070C100BCEADB /* Store+Future.swift in Sources */,
+				D34D461B2889863A00481FB2 /* EmptyMiddleware.swift in Sources */,
 				D3D6BAD2287EF0A900FCEC30 /* StoreV1.swift in Sources */,
 				D3D6BADB287EF47C00FCEC30 /* CounterReducer.swift in Sources */,
 				D3D6BADF287EF9B800FCEC30 /* CounterStore.swift in Sources */,
 				D324C4382885EC4C00D2AC36 /* EmptyStream.swift in Sources */,
+				D35ABBC728884856003FD7CF /* StandartOutputLogger.swift in Sources */,
 				D3DEF6E12886D8E600DF8302 /* AsyncSequenceReducer.swift in Sources */,
 				D324C43A2885EE1C00D2AC36 /* Store.swift in Sources */,
 				D3DEF6DD2886D85100DF8302 /* AsyncSequenceState.swift in Sources */,
@@ -591,6 +626,7 @@
 				D3B65F2028842DF800814435 /* AsyncStreamState.swift in Sources */,
 				D3DEF6D92886D80F00DF8302 /* AsyncSequenceCounterView.swift in Sources */,
 				D3B65F2D2884343A00814435 /* StoreV2.swift in Sources */,
+				D35ABBC528884845003FD7CF /* Logger.swift in Sources */,
 				D3F6E22B2881BDDD005834AB /* Button+Enabled.swift in Sources */,
 				D324F0662880708F00BCEADB /* Store+AsyncSequence.swift in Sources */,
 				D324F06D2880728900BCEADB /* AsyncCounterView.swift in Sources */,
@@ -609,7 +645,6 @@
 				D3F6E2312883325A005834AB /* AsyncStreamView.swift in Sources */,
 				D3B65F272884311700814435 /* Stream.swift in Sources */,
 				D31529E8287B5F8300E85D56 /* ReduxApp.swift in Sources */,
-				D3D6BAEC287F24CB00FCEC30 /* EchoMiddleware.swift in Sources */,
 				D324F06228806D3000BCEADB /* MiddlewareBuilder.swift in Sources */,
 				D324F0792880B59900BCEADB /* AnalyticsMiddleware.swift in Sources */,
 				D3D6BAEA287F236300FCEC30 /* AnyMiddleware.swift in Sources */,
@@ -626,7 +661,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D35ABBC028882C8A003FD7CF /* EchoMiddlewareTests.swift in Sources */,
 				D324C4332885AFE500D2AC36 /* SpyMiddleware.swift in Sources */,
 				D31529F9287B5F8500E85D56 /* CounterReducerTests.swift in Sources */,
 				D3DEF6ED2887106100DF8302 /* TestStateBuilder.swift in Sources */,
@@ -636,8 +670,10 @@
 				D324C4352885B04400D2AC36 /* TestState.swift in Sources */,
 				D324C43E2885F0D200D2AC36 /* MockReducer.swift in Sources */,
 				D3DEF6E92886ED1300DF8302 /* AsyncSequenceStateBuilder.swift in Sources */,
+				D34D461D288989C200481FB2 /* LogMiddlewareTests.swift in Sources */,
 				D3DEF6E52886D9D300DF8302 /* AsyncSequenceReducerTests.swift in Sources */,
 				D324C43C2885F09900D2AC36 /* StoreTests.swift in Sources */,
+				D34D462028898BA600481FB2 /* SpyLogger.swift in Sources */,
 				D35ABBBE28882C7B003FD7CF /* MiddlewarePipelineTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

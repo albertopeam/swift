@@ -50,7 +50,7 @@ struct MiddlewareBuilder<Action> {
         _ component: MiddlewarePipeline<Action>?
     ) -> AnyMiddleware<Action> {
         guard let component = component else {
-            return EchoMiddleware<Action>().eraseToAnyMiddleware()
+            return EmptyMiddleware<Action>().eraseToAnyMiddleware()
         }
 
         return component.eraseToAnyMiddleware()

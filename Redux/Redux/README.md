@@ -5,9 +5,12 @@ Flux architecture minimun implementation and showcase
 ## TODOs
 
 * POST PRE middleware?
+  * Logger builder to easily mount before/after middleware with logging
   * Middleware pipeline returns if no action applied
   * Does it make sense to mutate the action? or only act when dispatched
   * PRE/POST is kind of cool to trace events
+* Store
+  * remove print with try? why it happens?
 * SubStates, needed?
 * Investigate some/any instead of erasing with Any(Middleware)
 * Task cancellation in swiftUI is needed?

@@ -25,15 +25,12 @@ actor StoreV3<S: State, Action>: ObservableObject {
 
     convenience init(reducer: @escaping Reducer) {
         self.init(reducer: reducer,
-                  middleware: { EchoMiddleware<Action>() })
+                  middleware: { LogMiddleware<Action>(context: String(describing: Self.self)) })
     }
 
     func dispatch(action: Action) async {
-        guard let newAction = await middleware(action: action) else {
-            return
-        }
-
-        let stream = await reducer((state, newAction))
+        await middleware(action: action)
+        let stream = await reducer((state, action))
         for await newState in stream {
             await postState(newState)
         }

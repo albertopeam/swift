@@ -11,7 +11,7 @@ struct AsyncStreamView: View {
     @StateObject private var store: AsyncStreamStore =
         .init(reducer: AsyncStreamReducer.reducer,
               middleware: {
-            LogMiddleware<AsyncStreamAction>()
+            LogMiddleware<AsyncStreamAction>(context: String(describing: Self.self))
             AsyncSteamAnalyticsMiddleware()
         })
     @SwiftUI.State private var addTask: Task<Void, Never>?
