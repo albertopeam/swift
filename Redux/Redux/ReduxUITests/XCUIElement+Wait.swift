@@ -13,6 +13,7 @@ extension XCTest {
         let result = element.waitForLabel(equalTo: value)
         XCTAssertTrue(result)
     }
+
 }
 
 extension XCUIElement {

@@ -19,6 +19,7 @@ struct AsyncSequenceCounterView: View {
             HStack {
                 ProgressView()
                     .isShown(store.state.isLoading)
+                    .accessibilityIdentifier("progress")
                     .progressViewStyle(CircularProgressViewStyle())
                 HStack {
                     Text("Async sequence counter")

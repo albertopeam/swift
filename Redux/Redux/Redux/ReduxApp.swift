@@ -11,9 +11,6 @@ import SwiftUI
 struct ReduxApp: App {
     var body: some Scene {
         WindowGroup {
-            CounterView()
-            AsyncCounterView()
-            AsyncStreamView()
             AsyncSequenceCounterView()
         }
     }
