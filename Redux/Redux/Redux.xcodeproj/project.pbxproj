@@ -12,8 +12,7 @@
 		D31529EC287B5F8500E85D56 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D31529EB287B5F8500E85D56 /* Assets.xcassets */; };
 		D31529EF287B5F8500E85D56 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D31529EE287B5F8500E85D56 /* Preview Assets.xcassets */; };
 		D31529F9287B5F8500E85D56 /* CounterReducerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D31529F8287B5F8500E85D56 /* CounterReducerTests.swift */; };
-		D3152A03287B5F8500E85D56 /* ReduxUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3152A02287B5F8500E85D56 /* ReduxUITests.swift */; };
-		D3152A05287B5F8500E85D56 /* ReduxUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3152A04287B5F8500E85D56 /* ReduxUITestsLaunchTests.swift */; };
+		D3152A03287B5F8500E85D56 /* AsyncSequenceCounterViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3152A02287B5F8500E85D56 /* AsyncSequenceCounterViewTests.swift */; };
 		D324C4302885AF6300D2AC36 /* TestAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = D324C42F2885AF6300D2AC36 /* TestAction.swift */; };
 		D324C4332885AFE500D2AC36 /* SpyMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = D324C4322885AFE500D2AC36 /* SpyMiddleware.swift */; };
 		D324C4352885B04400D2AC36 /* TestState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D324C4342885B04400D2AC36 /* TestState.swift */; };
@@ -36,6 +35,7 @@
 		D34D461B2889863A00481FB2 /* EmptyMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = D34D461A2889863A00481FB2 /* EmptyMiddleware.swift */; };
 		D34D461D288989C200481FB2 /* LogMiddlewareTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D34D461C288989C200481FB2 /* LogMiddlewareTests.swift */; };
 		D34D462028898BA600481FB2 /* SpyLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = D34D461F28898BA600481FB2 /* SpyLogger.swift */; };
+		D34D46222889F53B00481FB2 /* XCUIElement+Wait.swift in Sources */ = {isa = PBXBuildFile; fileRef = D34D46212889F53B00481FB2 /* XCUIElement+Wait.swift */; };
 		D35ABBBE28882C7B003FD7CF /* MiddlewarePipelineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35ABBBD28882C7B003FD7CF /* MiddlewarePipelineTests.swift */; };
 		D35ABBC528884845003FD7CF /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35ABBC428884845003FD7CF /* Logger.swift */; };
 		D35ABBC728884856003FD7CF /* StandartOutputLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35ABBC628884856003FD7CF /* StandartOutputLogger.swift */; };
@@ -98,8 +98,7 @@
 		D31529F4287B5F8500E85D56 /* ReduxTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReduxTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D31529F8287B5F8500E85D56 /* CounterReducerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterReducerTests.swift; sourceTree = "<group>"; };
 		D31529FE287B5F8500E85D56 /* ReduxUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReduxUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		D3152A02287B5F8500E85D56 /* ReduxUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReduxUITests.swift; sourceTree = "<group>"; };
-		D3152A04287B5F8500E85D56 /* ReduxUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReduxUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		D3152A02287B5F8500E85D56 /* AsyncSequenceCounterViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncSequenceCounterViewTests.swift; sourceTree = "<group>"; };
 		D324C42F2885AF6300D2AC36 /* TestAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestAction.swift; sourceTree = "<group>"; };
 		D324C4322885AFE500D2AC36 /* SpyMiddleware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpyMiddleware.swift; sourceTree = "<group>"; };
 		D324C4342885B04400D2AC36 /* TestState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestState.swift; sourceTree = "<group>"; };
@@ -122,6 +121,7 @@
 		D34D461A2889863A00481FB2 /* EmptyMiddleware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyMiddleware.swift; sourceTree = "<group>"; };
 		D34D461C288989C200481FB2 /* LogMiddlewareTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogMiddlewareTests.swift; sourceTree = "<group>"; };
 		D34D461F28898BA600481FB2 /* SpyLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpyLogger.swift; sourceTree = "<group>"; };
+		D34D46212889F53B00481FB2 /* XCUIElement+Wait.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCUIElement+Wait.swift"; sourceTree = "<group>"; };
 		D35ABBBD28882C7B003FD7CF /* MiddlewarePipelineTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiddlewarePipelineTests.swift; sourceTree = "<group>"; };
 		D35ABBC428884845003FD7CF /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		D35ABBC628884856003FD7CF /* StandartOutputLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandartOutputLogger.swift; sourceTree = "<group>"; };
@@ -241,10 +241,18 @@
 		D3152A01287B5F8500E85D56 /* ReduxUITests */ = {
 			isa = PBXGroup;
 			children = (
-				D3152A02287B5F8500E85D56 /* ReduxUITests.swift */,
-				D3152A04287B5F8500E85D56 /* ReduxUITestsLaunchTests.swift */,
+				D3209734288C444A00D83923 /* AsyncSequenceCounter */,
+				D34D46212889F53B00481FB2 /* XCUIElement+Wait.swift */,
 			);
 			path = ReduxUITests;
+			sourceTree = "<group>";
+		};
+		D3209734288C444A00D83923 /* AsyncSequenceCounter */ = {
+			isa = PBXGroup;
+			children = (
+				D3152A02287B5F8500E85D56 /* AsyncSequenceCounterViewTests.swift */,
+			);
+			path = AsyncSequenceCounter;
 			sourceTree = "<group>";
 		};
 		D324C4312885AFDB00D2AC36 /* Middleware */ = {
@@ -682,8 +690,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D3152A03287B5F8500E85D56 /* ReduxUITests.swift in Sources */,
-				D3152A05287B5F8500E85D56 /* ReduxUITestsLaunchTests.swift in Sources */,
+				D3152A03287B5F8500E85D56 /* AsyncSequenceCounterViewTests.swift in Sources */,
+				D34D46222889F53B00481FB2 /* XCUIElement+Wait.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

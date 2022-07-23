@@ -4,6 +4,8 @@ Flux architecture minimun implementation and showcase
 
 ## TODOs
 
+* Tests
+  * Testplan
 * SubStates, needed?
   * ideas: 
     * https://github.com/ReSwift/ReSwift#create-a-subscription-of-several-substates-combined

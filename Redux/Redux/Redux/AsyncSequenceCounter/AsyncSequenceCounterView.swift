@@ -20,7 +20,12 @@ struct AsyncSequenceCounterView: View {
                 ProgressView()
                     .isShown(store.state.isLoading)
                     .progressViewStyle(CircularProgressViewStyle())
-                Text("Async sequence counter \(store.state.count)")
+                HStack {
+                    Text("Async sequence counter")
+                        .accessibilityIdentifier("counter")
+                    Text(store.state.count.description)
+                        .accessibilityIdentifier("count")
+                }
             }
             HStack {
                 Button("-") {
@@ -28,18 +33,21 @@ struct AsyncSequenceCounterView: View {
                         await store.dispatch(action: .subtract)
                     }
                 }
+                .accessibilityIdentifier("subtract")
                 .disabled(store.state.isLoading)
                 Button("+") {
                     Task {
                         await store.dispatch(action: .add)
                     }
                 }
+                .accessibilityIdentifier("add")
                 .disabled(store.state.isLoading)
                 Button("reset") {
                     Task {
                         await store.dispatch(action: .reset)
                     }
                 }
+                .accessibilityIdentifier("reset")
                 .disabled(store.state.isLoading)
             }
         }
