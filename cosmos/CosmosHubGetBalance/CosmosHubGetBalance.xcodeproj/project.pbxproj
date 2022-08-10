@@ -1,0 +1,452 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D303989228A157840078883E /* CosmosHubGetBalanceApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D303989128A157840078883E /* CosmosHubGetBalanceApp.swift */; };
+		D303989428A157840078883E /* BalancesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D303989328A157840078883E /* BalancesView.swift */; };
+		D303989628A157870078883E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D303989528A157870078883E /* Assets.xcassets */; };
+		D303989928A157870078883E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D303989828A157870078883E /* Preview Assets.xcassets */; };
+		D30398A128A15B6E0078883E /* SwiftProtobuf in Frameworks */ = {isa = PBXBuildFile; productRef = D30398A028A15B6E0078883E /* SwiftProtobuf */; };
+		D30398A428A15BD60078883E /* GRPC in Frameworks */ = {isa = PBXBuildFile; productRef = D30398A328A15BD60078883E /* GRPC */; };
+		D33B79DB28A40C4200EE8016 /* gogo.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33B79D028A40C4100EE8016 /* gogo.pb.swift */; };
+		D33B79DC28A40C4200EE8016 /* query.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33B79D128A40C4100EE8016 /* query.pb.swift */; };
+		D33B79DD28A40C4200EE8016 /* cosmos.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33B79D228A40C4200EE8016 /* cosmos.pb.swift */; };
+		D33B79DE28A40C4200EE8016 /* query.grpc.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33B79D328A40C4200EE8016 /* query.grpc.swift */; };
+		D33B79DF28A40C4200EE8016 /* coin.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33B79D428A40C4200EE8016 /* coin.pb.swift */; };
+		D33B79E028A40C4200EE8016 /* pagination.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33B79D528A40C4200EE8016 /* pagination.pb.swift */; };
+		D33B79E128A40C4200EE8016 /* coin.proto in Sources */ = {isa = PBXBuildFile; fileRef = D33B79D628A40C4200EE8016 /* coin.proto */; };
+		D33B79E228A40C4200EE8016 /* pagination.proto in Sources */ = {isa = PBXBuildFile; fileRef = D33B79D728A40C4200EE8016 /* pagination.proto */; };
+		D33B79E328A40C4200EE8016 /* query.proto in Sources */ = {isa = PBXBuildFile; fileRef = D33B79D828A40C4200EE8016 /* query.proto */; };
+		D33B79E428A40C4200EE8016 /* gogo.proto in Sources */ = {isa = PBXBuildFile; fileRef = D33B79D928A40C4200EE8016 /* gogo.proto */; };
+		D33B79E528A40C4200EE8016 /* cosmos.proto in Sources */ = {isa = PBXBuildFile; fileRef = D33B79DA28A40C4200EE8016 /* cosmos.proto */; };
+		D33B79E728A40D1000EE8016 /* BankClientType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33B79E628A40D1000EE8016 /* BankClientType.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		D303988E28A157840078883E /* CosmosHubGetBalance.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CosmosHubGetBalance.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D303989128A157840078883E /* CosmosHubGetBalanceApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CosmosHubGetBalanceApp.swift; sourceTree = "<group>"; };
+		D303989328A157840078883E /* BalancesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalancesView.swift; sourceTree = "<group>"; };
+		D303989528A157870078883E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D303989828A157870078883E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		D33B79D028A40C4100EE8016 /* gogo.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = gogo.pb.swift; sourceTree = "<group>"; };
+		D33B79D128A40C4100EE8016 /* query.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = query.pb.swift; sourceTree = "<group>"; };
+		D33B79D228A40C4200EE8016 /* cosmos.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cosmos.pb.swift; sourceTree = "<group>"; };
+		D33B79D328A40C4200EE8016 /* query.grpc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = query.grpc.swift; sourceTree = "<group>"; };
+		D33B79D428A40C4200EE8016 /* coin.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = coin.pb.swift; sourceTree = "<group>"; };
+		D33B79D528A40C4200EE8016 /* pagination.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = pagination.pb.swift; sourceTree = "<group>"; };
+		D33B79D628A40C4200EE8016 /* coin.proto */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.protobuf; path = coin.proto; sourceTree = "<group>"; };
+		D33B79D728A40C4200EE8016 /* pagination.proto */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.protobuf; path = pagination.proto; sourceTree = "<group>"; };
+		D33B79D828A40C4200EE8016 /* query.proto */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.protobuf; path = query.proto; sourceTree = "<group>"; };
+		D33B79D928A40C4200EE8016 /* gogo.proto */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.protobuf; path = gogo.proto; sourceTree = "<group>"; };
+		D33B79DA28A40C4200EE8016 /* cosmos.proto */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.protobuf; path = cosmos.proto; sourceTree = "<group>"; };
+		D33B79E628A40D1000EE8016 /* BankClientType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankClientType.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D303988B28A157840078883E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D30398A428A15BD60078883E /* GRPC in Frameworks */,
+				D30398A128A15B6E0078883E /* SwiftProtobuf in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D303988528A157830078883E = {
+			isa = PBXGroup;
+			children = (
+				D303989028A157840078883E /* CosmosHubGetBalance */,
+				D303988F28A157840078883E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D303988F28A157840078883E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D303988E28A157840078883E /* CosmosHubGetBalance.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D303989028A157840078883E /* CosmosHubGetBalance */ = {
+			isa = PBXGroup;
+			children = (
+				D33B79CE28A40C4100EE8016 /* protobuf */,
+				D303989128A157840078883E /* CosmosHubGetBalanceApp.swift */,
+				D303989328A157840078883E /* BalancesView.swift */,
+				D33B79E628A40D1000EE8016 /* BankClientType.swift */,
+				D303989528A157870078883E /* Assets.xcassets */,
+				D303989728A157870078883E /* Preview Content */,
+			);
+			path = CosmosHubGetBalance;
+			sourceTree = "<group>";
+		};
+		D303989728A157870078883E /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				D303989828A157870078883E /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		D33B79CE28A40C4100EE8016 /* protobuf */ = {
+			isa = PBXGroup;
+			children = (
+				D33B79CF28A40C4100EE8016 /* generated */,
+				D33B79D628A40C4200EE8016 /* coin.proto */,
+				D33B79D728A40C4200EE8016 /* pagination.proto */,
+				D33B79D828A40C4200EE8016 /* query.proto */,
+				D33B79D928A40C4200EE8016 /* gogo.proto */,
+				D33B79DA28A40C4200EE8016 /* cosmos.proto */,
+			);
+			path = protobuf;
+			sourceTree = "<group>";
+		};
+		D33B79CF28A40C4100EE8016 /* generated */ = {
+			isa = PBXGroup;
+			children = (
+				D33B79D028A40C4100EE8016 /* gogo.pb.swift */,
+				D33B79D128A40C4100EE8016 /* query.pb.swift */,
+				D33B79D228A40C4200EE8016 /* cosmos.pb.swift */,
+				D33B79D328A40C4200EE8016 /* query.grpc.swift */,
+				D33B79D428A40C4200EE8016 /* coin.pb.swift */,
+				D33B79D528A40C4200EE8016 /* pagination.pb.swift */,
+			);
+			path = generated;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D303988D28A157840078883E /* CosmosHubGetBalance */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D303989C28A157870078883E /* Build configuration list for PBXNativeTarget "CosmosHubGetBalance" */;
+			buildPhases = (
+				D303988A28A157840078883E /* Sources */,
+				D303988B28A157840078883E /* Frameworks */,
+				D303988C28A157840078883E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CosmosHubGetBalance;
+			packageProductDependencies = (
+				D30398A028A15B6E0078883E /* SwiftProtobuf */,
+				D30398A328A15BD60078883E /* GRPC */,
+			);
+			productName = CosmosHubGetBalance;
+			productReference = D303988E28A157840078883E /* CosmosHubGetBalance.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D303988628A157830078883E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1400;
+				LastUpgradeCheck = 1400;
+				TargetAttributes = {
+					D303988D28A157840078883E = {
+						CreatedOnToolsVersion = 14.0;
+					};
+				};
+			};
+			buildConfigurationList = D303988928A157830078883E /* Build configuration list for PBXProject "CosmosHubGetBalance" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D303988528A157830078883E;
+			packageReferences = (
+				D303989F28A15B6E0078883E /* XCRemoteSwiftPackageReference "swift-protobuf" */,
+				D30398A228A15BD60078883E /* XCRemoteSwiftPackageReference "grpc-swift" */,
+			);
+			productRefGroup = D303988F28A157840078883E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D303988D28A157840078883E /* CosmosHubGetBalance */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D303988C28A157840078883E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D303989928A157870078883E /* Preview Assets.xcassets in Resources */,
+				D303989628A157870078883E /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D303988A28A157840078883E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D33B79E028A40C4200EE8016 /* pagination.pb.swift in Sources */,
+				D303989428A157840078883E /* BalancesView.swift in Sources */,
+				D33B79DB28A40C4200EE8016 /* gogo.pb.swift in Sources */,
+				D33B79DF28A40C4200EE8016 /* coin.pb.swift in Sources */,
+				D303989228A157840078883E /* CosmosHubGetBalanceApp.swift in Sources */,
+				D33B79DE28A40C4200EE8016 /* query.grpc.swift in Sources */,
+				D33B79E228A40C4200EE8016 /* pagination.proto in Sources */,
+				D33B79E528A40C4200EE8016 /* cosmos.proto in Sources */,
+				D33B79E728A40D1000EE8016 /* BankClientType.swift in Sources */,
+				D33B79DC28A40C4200EE8016 /* query.pb.swift in Sources */,
+				D33B79E428A40C4200EE8016 /* gogo.proto in Sources */,
+				D33B79DD28A40C4200EE8016 /* cosmos.pb.swift in Sources */,
+				D33B79E328A40C4200EE8016 /* query.proto in Sources */,
+				D33B79E128A40C4200EE8016 /* coin.proto in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		D303989A28A157870078883E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D303989B28A157870078883E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D303989D28A157870078883E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"CosmosHubGetBalance/Preview Content\"";
+				DEVELOPMENT_TEAM = U36872D6G6;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.github.albertopeam.CosmosHubGetBalance;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D303989E28A157870078883E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"CosmosHubGetBalance/Preview Content\"";
+				DEVELOPMENT_TEAM = U36872D6G6;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.github.albertopeam.CosmosHubGetBalance;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D303988928A157830078883E /* Build configuration list for PBXProject "CosmosHubGetBalance" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D303989A28A157870078883E /* Debug */,
+				D303989B28A157870078883E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D303989C28A157870078883E /* Build configuration list for PBXNativeTarget "CosmosHubGetBalance" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D303989D28A157870078883E /* Debug */,
+				D303989E28A157870078883E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D303989F28A15B6E0078883E /* XCRemoteSwiftPackageReference "swift-protobuf" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-protobuf.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+		D30398A228A15BD60078883E /* XCRemoteSwiftPackageReference "grpc-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/grpc/grpc-swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D30398A028A15B6E0078883E /* SwiftProtobuf */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D303989F28A15B6E0078883E /* XCRemoteSwiftPackageReference "swift-protobuf" */;
+			productName = SwiftProtobuf;
+		};
+		D30398A328A15BD60078883E /* GRPC */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D30398A228A15BD60078883E /* XCRemoteSwiftPackageReference "grpc-swift" */;
+			productName = GRPC;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = D303988628A157830078883E /* Project object */;
+}
