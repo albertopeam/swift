@@ -4,27 +4,31 @@ Flux architecture minimun implementation and showcase
 
 ## TODOs
 
-* Tests
-  * Testplan
 * SubStates, needed?
   * ideas: 
     * https://github.com/ReSwift/ReSwift#create-a-subscription-of-several-substates-combined
+* Create Package and move code
 * Investigate some/any instead of erasing with Any(Middleware)
+* Candidates to demo:
+  * crypto wallet?
+    * teoría clave publica/privada
+    * generar semillas
+    * cargar semillas
+    * consultar blockchain
+    * enviar transacciones
+  * crypto explorer: Cosmos?, dot?
+    * tx, address, block
+  * crypto find something that is not implemented on mobile yet
+  * crypto usage of web3 libs
 * DependencyInjection strategies:
   * ServiceLocator
   * Injector
   * ManualInjection
-* Create Package and move code
-* Candidates to demo:
-  * crypto explorer: Cosmos?
-    * tx, address, block
-  * crypto find something that is not implemented on mobile yet
-  * crypto usage of web3 libs
-* UITests?
-  * maybe in demo
 
 ## DONE
 
+* UITests
+  * maybe in demo
 * Task cancellation in swiftUI is needed?
   * Minute 18 aprox https://developer.apple.com/videos/play/wwdc2021/10019/
 * Store
