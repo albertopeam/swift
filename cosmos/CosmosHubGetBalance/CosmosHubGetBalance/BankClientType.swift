@@ -24,7 +24,7 @@ final class BankClient: BankClientType {
             group = PlatformSupport.makeEventLoopGroup(loopCount: 1)
             let channel = try GRPCChannelPool.with(
                 target: .host(host, port: port),
-                transportSecurity: .plaintext,
+                transportSecurity: .plaintext, // The Cosmos SDK doesn't support any transport security mechanism so .plaintext is OK
                 eventLoopGroup: group
             )
             client = .init(channel: channel)

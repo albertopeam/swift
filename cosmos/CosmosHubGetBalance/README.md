@@ -39,6 +39,5 @@
 ## Import generated pb.swift files into the project
 
 * Add the protobuf directory to the project from xCode
-* Write the BankClient to abstract the usage of the gRPC and protofbuf libraries
+* Write the BankClient to abstract the usage of the gRPC and protofbuf libraries. IMPORTANT: The Cosmos SDK doesn't support any transport security mechanism so .plaintext is OK
 * Write the BalanceView to print the balances
-* TODO: use a secure connection(transportSecurity)
