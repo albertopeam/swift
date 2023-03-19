@@ -1,0 +1,8 @@
+syntax = "proto3";
+message Example {
+   enum E {
+      DEFAULT = 0;
+   }
+   int32 field1 = 1;
+   repeated string field2 = 2;
+}
