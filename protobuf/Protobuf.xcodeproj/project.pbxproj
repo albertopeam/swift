@@ -13,7 +13,7 @@
 		9F5392C229C7A5E900450D15 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F5392C129C7A5E900450D15 /* Preview Assets.xcassets */; };
 		9F5392CA29C7A65E00450D15 /* SwiftProtobuf in Frameworks */ = {isa = PBXBuildFile; productRef = 9F5392C929C7A65E00450D15 /* SwiftProtobuf */; };
 		9F5392CC29C7A65E00450D15 /* SwiftProtobufPluginLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = 9F5392CB29C7A65E00450D15 /* SwiftProtobufPluginLibrary */; };
-		9F5392CE29C7B6CE00450D15 /* Example.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5392CD29C7B6CE00450D15 /* Example.pb.swift */; };
+		9FE39F2729C901B400A43A20 /* BookInfo.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE39F2629C901B400A43A20 /* BookInfo.pb.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,7 +22,7 @@
 		9F5392BC29C7A5E900450D15 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		9F5392BE29C7A5E900450D15 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9F5392C129C7A5E900450D15 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		9F5392CD29C7B6CE00450D15 /* Example.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Example.pb.swift; sourceTree = "<group>"; };
+		9FE39F2629C901B400A43A20 /* BookInfo.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookInfo.pb.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +57,7 @@
 		9F5392B929C7A5E900450D15 /* Protobuf */ = {
 			isa = PBXGroup;
 			children = (
-				9F5392CD29C7B6CE00450D15 /* Example.pb.swift */,
+				9FE39F2629C901B400A43A20 /* BookInfo.pb.swift */,
 				9F5392BA29C7A5E900450D15 /* ProtobufApp.swift */,
 				9F5392BC29C7A5E900450D15 /* ContentView.swift */,
 				9F5392BE29C7A5E900450D15 /* Assets.xcassets */,
@@ -152,8 +152,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				9F5392BD29C7A5E900450D15 /* ContentView.swift in Sources */,
+				9FE39F2729C901B400A43A20 /* BookInfo.pb.swift in Sources */,
 				9F5392BB29C7A5E900450D15 /* ProtobufApp.swift in Sources */,
-				9F5392CE29C7B6CE00450D15 /* Example.pb.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

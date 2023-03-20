@@ -1,4 +1,4 @@
 #!/bin/bash
 
-protoc --swift_out=. Example.proto
-mv Example.pb.swift ../Protobuf
+protoc --swift_out=. BookInfo.proto
+mv BookInfo.pb.swift ../Protobuf
